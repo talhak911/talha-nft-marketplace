@@ -1,15 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Layout from './Layout';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Hero from './pages/Hero';
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout/>,
+    children: [
+            {
+              path: "/",
+              element:<Hero/>
+            },
+            {
+              path: "about",
+              element: <div><h1>helloo</h1></div>
+            },
+            {
+              path: "contact",
+              element:<div><h1>contact</h1></div>
+            }
+         ]
+  }
+]);
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+     <RouterProvider router={router} />
   </React.StrictMode>
 );
 
