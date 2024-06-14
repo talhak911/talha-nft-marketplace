@@ -1,9 +1,9 @@
-import { ReactComponent as Rocket } from '../assets/rocket.svg'
+import { ReactComponent as Rocket } from '../../assets/rocket.svg'
 
-import HeroImage from "../components/hero/HeroImage";
+import HeroImage from "./HeroImage";
 export default function Hero() {
     return (
-        <div className=" p-[40px] py-[20px] lg:px-[135px] md:px-[90px] md:py-[80px]">
+        <div className=" px-[30px] py-[20px]  md:px-[90px] md:py-[80px] lg:px-[135px] lg:py-[40px]">
             <div className="flex flex-col md:flex-row gap-[30px]">
                 <div className="flex flex-col flex-1 gap-[20px] md:w-1/2 order-2 md:order-1">
                     <h1 className="text-white text-[28px] md:text-[38px] lg:text-[67px] font-semibold p-1">
@@ -16,7 +16,7 @@ export default function Hero() {
                         <HeroImage />
                     </div>
 
-                    <button className="flex w-full justify-center items-center text-white font-semibold px-12 gap-3 md:w-[224px] h-[60px] bg-[#A259FF] rounded-2xl">
+                    <button className="flex w-[315px] mx-auto md:mx-0 justify-center items-center text-white font-semibold px-12 gap-3 md:w-[224px] h-[60px] bg-[#A259FF] rounded-2xl">
                         <Rocket /> Get Started
                     </button>
                     <div className='mx-auto md:mx-[0px]'>

@@ -7,7 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Hero from './pages/Hero';
+import Home from './pages/Home';
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     children: [
             {
               path: "/",
-              element:<Hero/>
+              element:<Home/>
             },
             {
               path: "about",
