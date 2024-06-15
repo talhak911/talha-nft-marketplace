@@ -7,26 +7,29 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import store from './store/Store'
+import { Provider } from 'react-redux'
 import Home from './pages/Home';
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>,
+    element: <Layout />,
     children: [
-            {
-              path: "/",
-              element:<Home/>
-            },
-            {
-              path: "about",
-              element: <div><h1>helloo</h1></div>
-            },
-            {
-              path: "contact",
-              element:<div><h1>contact</h1></div>
-            }
-         ]
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "about",
+        element: <div><h1>helloo</h1></div>
+      },
+      {
+        path: "contact",
+        element: <div><h1>contact</h1></div>
+      }
+    ]
   }
 ]);
 const root = ReactDOM.createRoot(
@@ -34,7 +37,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 

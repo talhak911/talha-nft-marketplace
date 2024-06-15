@@ -4,7 +4,7 @@ import HeroImage from "./HeroImage";
 export default function Hero() {
     return (
         <div className=" px-[30px] py-[20px]  md:px-[90px] md:py-[80px] lg:px-[135px] lg:py-[40px]">
-            <div className="flex flex-col md:flex-row gap-[30px]">
+            <div className="flex flex-col md:flex-row gap-[30px] w-full">
                 <div className="flex flex-col flex-1 gap-[20px] md:w-1/2 order-2 md:order-1">
                     <h1 className="text-white text-[28px] md:text-[38px] lg:text-[67px] font-semibold p-1">
                         Discover Digital Art & Collect NFTs
@@ -36,7 +36,7 @@ export default function Hero() {
                     </div>
                     </div>
                 </div>
-                <div className='hidden md:block md:order-2'>
+                <div className='hidden md:block md:order-2 md:w-1/2'>
                     <HeroImage />
                 </div>
             </div>
