@@ -24,29 +24,107 @@ export default function DiscoverMoreNfts() {
                      {/* one cards */}
                      {/* w-[315px] h-[402px] md:w-[330px] md:h-[469px] donwn here ! */}
                     <div className="flex flex-col  ">
+                        {/* nft image */}
                         <div className=" h-[238px] w-[315px] md:w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
-                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] ">
-                   
+                        {/* nft details */}
+                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                            <div className="flex flex-col gap-[25px]">
+                                <div className="flex flex-col gap-[5px]">
+                                    <h5 className="text-[22px] font-semibold">
+                                        NFT name
+                                    </h5>
+
+                                    <div className="flex gap-[10px]">
+                                        <span>AV</span>
+                                        <span className="text-[16px]"> Artist name</span>
+                                    </div>
+                                </div>
+                                <div className="flex justify-between">
+                                    <div className="flex flex-col gap-[8px]">
+                                        <span className="text-[#858584] text-[12px]">Price</span>
+                                        <span className="text-[12px] md:text-[16px]">1.64 ETH</span>
+                                    </div>
+                                    <div className="flex flex-col gap-[8px] text-right">
+                                        <span className="text-[#858584] text-[12px]">Higest Bid</span>
+                                        <span className="text-[12px] md:text-[16px]">0.33 ETH</span>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
+                    
                     <div className="flex flex-col  ">
+                        {/* nft image */}
                         <div className=" h-[238px] w-[315px] md:w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
-                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] ">
-                   
+                        {/* nft details */}
+                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                            <div className="flex flex-col gap-[25px]">
+                                <div className="flex flex-col gap-[5px]">
+                                    <h5 className="text-[22px] font-semibold">
+                                        NFT name
+                                    </h5>
+
+                                    <div className="flex gap-[10px]">
+                                        <span>AV</span>
+                                        <span className="text-[16px]"> Artist name</span>
+                                    </div>
+                                </div>
+                                <div className="flex justify-between">
+                                    <div className="flex flex-col gap-[8px]">
+                                        <span className="text-[#858584] text-[12px]">Price</span>
+                                        <span className="text-[12px] md:text-[16px]">1.64 ETH</span>
+                                    </div>
+                                    <div className="flex flex-col gap-[8px] text-right">
+                                        <span className="text-[#858584] text-[12px]">Higest Bid</span>
+                                        <span className="text-[12px] md:text-[16px]">0.33 ETH</span>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
+                    
                     <div className="flex flex-col  ">
+                        {/* nft image */}
                         <div className=" h-[238px] w-[315px] md:w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
-                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] ">
-                   
+                        {/* nft details */}
+                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                            <div className="flex flex-col gap-[25px]">
+                                <div className="flex flex-col gap-[5px]">
+                                    <h5 className="text-[22px] font-semibold">
+                                        NFT name
+                                    </h5>
+
+                                    <div className="flex gap-[10px]">
+                                        <span>AV</span>
+                                        <span className="text-[16px]"> Artist name</span>
+                                    </div>
+                                </div>
+                                <div className="flex justify-between">
+                                    <div className="flex flex-col gap-[8px]">
+                                        <span className="text-[#858584] text-[12px]">Price</span>
+                                        <span className="text-[12px] md:text-[16px]">1.64 ETH</span>
+                                    </div>
+                                    <div className="flex flex-col gap-[8px] text-right">
+                                        <span className="text-[#858584] text-[12px]">Higest Bid</span>
+                                        <span className="text-[12px] md:text-[16px]">0.33 ETH</span>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
+                    
 
                 </div>
             </div>
