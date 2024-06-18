@@ -79,7 +79,7 @@ const Timer1: React.FC = () => {
       <h4 className="text-[12px] leading-[13.2px]">
         Auction ends in:
       </h4>
-      <div className="flex gap-[10px] items-center justify-center">
+      <div className="flex gap-[10px] ">
         <div className="flex flex-col gap-[5px]">
         <div className="flex">
           <span className=" text-[#FBFAF8] text-[38px] font-bold  leading-[45.6px]">
@@ -91,7 +91,7 @@ const Timer1: React.FC = () => {
         </div>
           <p className=" text-[12px]">Hours</p>
         </div>
-        <span className="text-[#FBFAF8] text-[38px] font-bold">:</span>
+        <span className="text-[#FBFAF8] text-[38px] font-bold  leading-[45.6px] "  >:</span>
         <div className="flex flex-col gap-[5px]">
         <div className="flex">
           <span className=" text-[#FBFAF8] text-[38px] font-bold  leading-[45.6px]">
