@@ -1,8 +1,9 @@
 import BrowseCategories from "../components/browseCategories/BrowseCategories";
-import NftHighlight from "../components/browseCategories/nftHighlight/NftHighlight";
+import NftHighlight from "../components/nftHighlight/NftHighlight";
 import DiscoverMoreNfts from "../components/discoverMoreNfts/DiscoverMoreNfts";
 import Hero from "../components/hero/Hero";
 import TrendingCollection from "../components/trendingCollection/TrendingCollection";
+import HowItWorks from "../components/howItWorks/HowItWorks";
 
 export default function Home(){
     return (
@@ -12,6 +13,7 @@ export default function Home(){
         <BrowseCategories/>
         <DiscoverMoreNfts/>
         <NftHighlight/>
+        <HowItWorks/>
         </>
     )
 }
