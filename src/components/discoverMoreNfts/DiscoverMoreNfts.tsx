@@ -1,7 +1,7 @@
 import { ReactComponent as EyeIcon } from "../../assets/icons/eye.svg";
 export default function DiscoverMoreNfts() {
     return (
-        <div className="px-[30px] py-[20px] md:px-[90px] md:py-[40px] lg:px-[115px] lg:py-[80px]">
+        <div className="px-[30px] py-[40px] md:px-[72px] lg:px-[115px] lg:py-[80px]">
             <div className="flex flex-col gap-[40px] md:gap-[60px] max-w-[1050px] mx-auto ">
                 <div className="flex flex-col gap-[10px]">
                     <h3 className="font-semibold text-[28px] lg:text-[38px]">
@@ -22,14 +22,14 @@ export default function DiscoverMoreNfts() {
                 {/* cards */}
                 <div className="flex flex-col flex-wrap md:flex-nowrap md:flex-row md:overflow-x-scroll gap-[20px] md:gap-[30px] md:justify-around content-around">
                      {/* one cards */}
-                     {/* w-[315px] h-[402px] md:w-[330px] md:h-[469px] donwn here ! */}
+                     {/* w-[315px] h-[402px] md:max-w-[330px] md:h-[469px] donwn here ! */}
                     <div className="flex flex-col  ">
                         {/* nft image */}
-                        <div className=" h-[238px] w-[315px] md:w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
+                        <div className=" h-[238px] w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
                         {/* nft details */}
-                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                        <div className=" h-[164px] w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
                             <div className="flex flex-col gap-[25px]">
                                 <div className="flex flex-col gap-[5px]">
                                     <h5 className="text-[22px] font-semibold">
@@ -59,11 +59,11 @@ export default function DiscoverMoreNfts() {
                     
                     <div className="flex flex-col  ">
                         {/* nft image */}
-                        <div className=" h-[238px] w-[315px] md:w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
+                        <div className=" h-[238px] w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
                         {/* nft details */}
-                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                        <div className=" h-[164px] w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
                             <div className="flex flex-col gap-[25px]">
                                 <div className="flex flex-col gap-[5px]">
                                     <h5 className="text-[22px] font-semibold">
@@ -93,11 +93,11 @@ export default function DiscoverMoreNfts() {
                     
                     <div className="flex flex-col  ">
                         {/* nft image */}
-                        <div className=" h-[238px] w-[315px] md:w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
+                        <div className=" h-[238px] w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
                         {/* nft details */}
-                        <div className=" h-[164px] w-[315px] md:w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                        <div className=" h-[164px] w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
                             <div className="flex flex-col gap-[25px]">
                                 <div className="flex flex-col gap-[5px]">
                                     <h5 className="text-[22px] font-semibold">

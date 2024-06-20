@@ -2,7 +2,7 @@ import astronautImage from "../../assets/astronautImage.png"
 import {ReactComponent as EnvelopIcon} from "../../assets/icons/envelope.svg"
 export default function SubscribeWidget(){
     return (
-        <div className="px-[30px] py-[20px]  md:px-[90px] md:py-[80px] lg:px-[115px] lg:py-[40px]">
+        <div className="px-[30px] py-[40px] md:px-[72px] md:py-[80px] lg:px-[115px] lg:py-[40px]">
             <div className="flex flex-col  mx-auto max-w-[1050px] ">
                 <div className=" md:py-[40px] md:px-[30px] lg:p-[60px]   md:bg-[#3B3B3B] rounded-[20px]">
                     <div className="flex flex-col md:flex-row justify-center items-center gap-[10px] md:gap-[30px] lg:gap-[80px]">

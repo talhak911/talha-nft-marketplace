@@ -9,6 +9,10 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
+
+      },
+      screens: {
+        xsm: '375px', 
       },
       backgroundImage: {
         'nft-mobile': "url('/src/assets/nftHighlightImageMobile.png')",

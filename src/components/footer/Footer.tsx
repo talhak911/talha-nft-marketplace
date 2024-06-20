@@ -7,7 +7,7 @@ import { ReactComponent as EnvelopIcon } from "../../assets/icons/envelope.svg"
 
 export default function Footer() {
     return (
-        <div className="px-[30px] py-[40px]  md:px-[90px]  lg:px-[115px] S bg-[#3B3B3B]">
+        <div className="px-[30px] py-[40px] md:px-[72px]  lg:px-[115px]  bg-[#3B3B3B]">
             <div className="flex flex-col lg:flex-row mx-auto max-w-[1050px] gap-[30px] lg:justify-between">
                 <div className="flex flex-col gap-[20px] lg:max-w-[327.41px]">
                     <div className="flex items-center">

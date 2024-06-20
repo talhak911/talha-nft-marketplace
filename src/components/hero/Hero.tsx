@@ -3,7 +3,7 @@ import { ReactComponent as Rocket } from '../../assets/icons/rocket.svg'
 import HeroImage from "./HeroImage";
 export default function Hero() {
     return (
-        <div className=" px-[30px] py-[20px]  md:px-[90px] md:py-[80px] lg:px-[115px] lg:py-[40px]   ">
+        <div className="px-[30px] py-[40px] md:px-[72px]  md:py-[80px] lg:px-[115px] lg:py-[40px]   ">
             <div className="  flex flex-col md:flex-row gap-[30px] max-w-[1050px] mx-auto  ">
                 <div className=" flex flex-col  gap-[20px] md:w-1/2">
                     <h1 className="text-white text-[28px] md:text-[38px] lg:text-[67px] font-semibold ">

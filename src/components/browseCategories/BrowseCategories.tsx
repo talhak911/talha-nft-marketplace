@@ -26,7 +26,7 @@ export default function BrowseCategories() {
     ];
 
     return (
-        <div className="px-[30px] py-[20px] md:px-[90px] md:py-[40px] lg:px-[115px] lg:py-[80px]">
+        <div className="px-[30px] py-[40px] md:px-[72px] lg:px-[115px] lg:py-[80px]">
             <div className="flex flex-col gap-[40px] lg:gap-[60px] max-w-[1050px] mx-auto ">
                 {/* title */}
                 <div>
@@ -35,20 +35,26 @@ export default function BrowseCategories() {
                     </h3>
                 </div>
                 {/* categories list */}
-                <div className="flex flex-wrap gap-[20px] md:gap-[30px] justify-around ">
-                    {categoryItems.map((item, index) => (
-                        <div key={index} className="w-[147.5px] md:w-[150px] lg:w-[240px] h-[209px] lg:h-[316px] rounded-t-[20px]">
-                            <div className="flex flex-col">
-                                <img src={item.imgUrl} alt="" className="w-full  " />
-                            </div>
-                            <div className="h-[67px] md:h-[76px] bg-[#3B3B3B] rounded-b-[20px] ">
-                                <p className=" font-semibold text-[16px] lg:text-[22px] p-[20px] lg:pb-[30px] ">
-                                    {item.category}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                
+               
+                <div className="grid gap-[20px] md:gap-[30px] justify-center grid-cols-1 xsm:grid-cols-2 md:grid-cols-4 mx-auto" >
+         {categoryItems.map((item, index) => (
+         <div key={index} className="w-full max-w-[148px] md:max-w-[150px] lg:max-w-[240px] h-[209px] lg:h-[316px] rounded-t-[20px]">
+         <div className="flex flex-col">
+             <img src={item.imgUrl} alt="" className="w-[148px] h-[142px] md:w-[150px] lg:size-[240px]" />
+         </div>
+         <div className="h-[67px] w-full md:h-[76px] bg-[#3B3B3B] rounded-b-[20px] ">
+             <p className=" font-semibold text-[16px] lg:text-[22px] p-[20px] lg:pb-[30px] ">
+                 {item.category}
+             </p>
+         </div>
+     </div>
+    ))}
+</div>
+
+
+             
+
 
             </div>
         </div>
