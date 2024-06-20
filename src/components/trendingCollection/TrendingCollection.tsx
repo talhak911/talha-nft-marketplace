@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 export default function TrendingCollection(){
     const [collections,setCollections]=useState<any>([])
-    const [nfts,setNfts]=useState<any>([])
+    
     const options = {
         method: 'GET',
         headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
@@ -29,18 +29,18 @@ export default function TrendingCollection(){
      },[])
        //{process.env.REACT_APP_OPEN_SEA_KEY}
     return (
-        <div className="px-[30px] py-[20px]  md:px-[90px] md:py-[80px] lg:px-[115px] lg:py-[40px]">
-                <div className="flex flex-col gap-[40px] lg:gap-[60px] ">
+        <div className="px-[30px] py-[20px]  md:px-[90px] md:py-[80px] lg:px-[115px] lg:py-[40px] ">
+                <div className=" max-w-[1050px]  mx-auto flex flex-col gap-[40px] lg:gap-[60px] ">
                 <div className="flex flex-col gap-[10px]">
-                    <h3 className="text-[28px] lg:text-[38px] font-semibold" >Trending Collection</h3>
+                    <h3 className="text-[28px] lg:text-[38px] font-semibold" >Trending Collecticon</h3>
                     <p className="text-[16px] lg:text-[22px] ">Checkout our weekly updated trending collection.</p>
                 </div>
                     {/* cards */}
-                <div className="flex gap-[30px] w-full overflow-y-scroll justify-around">
+                <div className="flex gap-[30px] w-full justify-center ">
                     {/* single card */}
                     {collections?.map((collection:any,index:number)=>
-                    <div key={index} className="flex flex-col gap-[15px]">
-                    <img src={collection?.image_url} className=" size-[315px] md:size-[330px] rounded-[20px]"/>
+                    <div key={index} className={`flex-col gap-[15px] ${index<1 ? "flex " : "hidden"} md:${index<2 ? "flex" :"hidden" } lg:flex`}>
+                    <img src={collection?.image_url} className="  md:max-w-[330px] max-w-[315px] rounded-[20px]"/>
 
                    
                     {/* inner small cards */}
@@ -48,13 +48,13 @@ export default function TrendingCollection(){
                         {/* <img src={nfts[0]?.image_url} className=" size-[100px] rounded-[20px]"/> */}
 
                         
-                        <div className="bg-blue-500 size-[95px] md:size-[100px] rounded-[20px]">
+                        <div className="bg-blue-500 w-[95px] h-[95px] md:max-w-[100px] md:max-h-[100px] rounded-[20px]">
                           
                         </div>
-                        <div className="bg-blue-500 size-[95px] md:size-[100px] rounded-[20px]">
+                        <div className="bg-blue-500 w-[95px] h-[95px]  md:max-w-[100px] md:max-h-[100px] rounded-[20px]">
                           
                         </div>
-                        <div className="bg-blue-500 size-[95px] md:size-[100px] rounded-[20px]">
+                        <div className="bg-blue-500 w-[95px] h-[95px]  md:max-w-[100px] md:max-h-[100px] rounded-[20px]">
 
                         </div>
                        

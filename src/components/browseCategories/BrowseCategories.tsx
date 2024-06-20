@@ -27,7 +27,7 @@ export default function BrowseCategories() {
 
     return (
         <div className="px-[30px] py-[20px] md:px-[90px] md:py-[40px] lg:px-[115px] lg:py-[80px]">
-            <div className="flex flex-col gap-[40px] lg:gap-[60px]">
+            <div className="flex flex-col gap-[40px] lg:gap-[60px] max-w-[1050px] mx-auto ">
                 {/* title */}
                 <div>
                     <h3 className="font-semibold text-[28px] lg:text-[38px]">
