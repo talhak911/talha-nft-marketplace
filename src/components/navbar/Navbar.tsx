@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <div className="flex justify-between items-center  text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[20px]">
       <div className="flex items-center">
-        <Logo className="h-[20px] lg:h-[30px] w-8 mr-2" />
+        <Logo className="h-[20px] lg:h-[30px] size-[32px] w-8 mr-2" />
         <h2 className="text-[14.85px] lg:text-[19.8px] font-bold">NFT marketplace</h2>
       </div>
 
