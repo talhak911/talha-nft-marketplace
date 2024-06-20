@@ -5,19 +5,19 @@ import Hero from "../components/hero/Hero";
 import TrendingCollection from "../components/trendingCollection/TrendingCollection";
 import HowItWorks from "../components/howItWorks/HowItWorks";
 import SubscribeWidget from "../components/subscribeWidget/SubscribeWidget";
-import Footer from "../components/footer/Footer";
+
 
 export default function Home(){
     return (
         <>
-        {/* <Hero/>
+        <Hero/>
         <TrendingCollection/>
         <BrowseCategories/>
         <DiscoverMoreNfts/>
         <NftHighlight/>
         <HowItWorks/>
-        <SubscribeWidget/> */}
-        <Footer/>
+        <SubscribeWidget/>
+        
         </>
     )
 }

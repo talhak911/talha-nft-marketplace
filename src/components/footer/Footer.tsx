@@ -31,7 +31,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-[20px] text-[#CCCCCC]">
+                <div className="flex flex-col gap-[20px] text-[#CCCCCC] lg:w-[240px]">
                     <h4 className="font-bold text-[22px] text-white ">Explore</h4>
                     <a href="">Marketplace</a>
                     <a href="">Rankings</a>
@@ -42,7 +42,7 @@ export default function Footer() {
                     <h4 className="font-bold text-[22px] text-white ">Join our weekly digest</h4>
                    <span>Get exclusive promotions & updates straight to your inbox.</span>
                    <div className="flex flex-col md:flex-row gap-[16px] md:gap-0 justify-between md:bg-white rounded-[20px] md:max-w-[420px]">
-                                <input className=" text-[#2B2B2B] h-[46px] rounded-[20px] py-[16px] px-[20px] border border-[#858584] md:border-none  md:focus:border-none " type="text" placeholder="Enter Your Email Address" />
+                                <input className=" text-[#2B2B2B] h-[46px] rounded-[20px] py-[16px] px-[20px] border border-[#858584] md:border-none  md:focus:outline-none " type="text" placeholder="Enter Your Email Address" />
 
                                 <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-[#A259FF] md:w-[211px] ">
                                         <EnvelopIcon/>
