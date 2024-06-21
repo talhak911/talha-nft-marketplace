@@ -1,6 +1,8 @@
-import {ReactComponent as Search} from "../assets/icons/search.svg"
+import { ReactComponent as Search } from "../assets/icons/search.svg"
+import DisplayNFTs from "../components/displayNFTs/DisplayNfts"
 export default function Category() {
     return (
+        <>
         <div className="px-[30px] py-[40px]  md:px-[90px] md:py-[60px] lg:px-[115px] lg:py-[80px]">
             <div className="flex flex-col gap-[30px] mx-auto max-w-[1050px] ">
                 <div className="flex flex-col gap-[10px]">
@@ -15,12 +17,12 @@ export default function Category() {
 
                 {/* search bar */}
                 <div className="relative h-[60px] border  border-[#3B3B3B] rounded-[20px] w-full px-[20px]">
-                   
-                        <input type="search" id="search-dropdown" className="block h-full p-2.5 w-full z-20 text-[16px]  bg-transparent  focus:outline-none" placeholder="Search your favourite NFTs" required />
-                        <button type="submit" className="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white">
-                     <Search/>
-</button>
-                    
+
+                    <input type="search" id="search-dropdown" className="block h-full p-2.5 w-full z-20 text-[16px]  bg-transparent  focus:outline-none" placeholder="Search your favourite NFTs" required />
+                    <button type="submit" className="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white">
+                        <Search />
+                    </button>
+
                 </div>
 
                 <div className="flex items-center justify-center mt-10 ">
@@ -29,7 +31,12 @@ export default function Category() {
                         <span className="rounded-[20px] bg-[#858584] px-[10px] py-[5px]">302</span>
                     </div>
                 </div>
+
+                
             </div>
+           
         </div>
+        <DisplayNFTs/>
+        </>
     )
 }

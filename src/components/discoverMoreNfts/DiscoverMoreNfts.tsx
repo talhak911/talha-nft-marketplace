@@ -20,16 +20,17 @@ export default function DiscoverMoreNfts() {
                 </div>
 
                 {/* cards */}
-                <div className="flex flex-col flex-wrap md:flex-nowrap md:flex-row md:overflow-x-scroll gap-[20px] md:gap-[30px] md:justify-around content-around">
+                <div className="flex items-center justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[30px] items-center justify-center ">
                      {/* one cards */}
-                     {/* w-[315px] h-[402px] md:max-w-[330px] md:h-[469px] donwn here ! */}
-                    <div className="flex flex-col  ">
+                     {/* w-full min-w-[295px] max-w-[315px] h-[402px] md:max-w-[330px] md:h-[469px] donwn here ! */}
+                    <div className="flex flex-col w-full max-w-[315px] md:w-[330px] items-center justify-center ">
                         {/* nft image */}
-                        <div className=" h-[238px] w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
+                        <div className=" h-[238px] w-full  max-w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
                         {/* nft details */}
-                        <div className=" h-[164px] w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                        <div className=" h-[164px] w-full  max-w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
                             <div className="flex flex-col gap-[25px]">
                                 <div className="flex flex-col gap-[5px]">
                                     <h5 className="text-[22px] font-semibold">
@@ -57,13 +58,14 @@ export default function DiscoverMoreNfts() {
                     </div>
                     
                     
-                    <div className="flex flex-col  ">
+                    
+                    <div className="flex flex-col w-full items-center justify-center ">
                         {/* nft image */}
-                        <div className=" h-[238px] w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
+                        <div className=" h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
                         {/* nft details */}
-                        <div className=" h-[164px] w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                        <div className=" h-[164px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
                             <div className="flex flex-col gap-[25px]">
                                 <div className="flex flex-col gap-[5px]">
                                     <h5 className="text-[22px] font-semibold">
@@ -91,13 +93,14 @@ export default function DiscoverMoreNfts() {
                     </div>
                     
                     
-                    <div className="flex flex-col  ">
+                    
+                    <div className="flex flex-col w-full items-center justify-center ">
                         {/* nft image */}
-                        <div className=" h-[238px] w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
+                        <div className=" h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
                         
                         </div>
                         {/* nft details */}
-                        <div className=" h-[164px] w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
+                        <div className=" h-[164px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[173px] bg-[#3B3B3B] rounded-b-[20px] p-[20px] md:px-[30px]">
                             <div className="flex flex-col gap-[25px]">
                                 <div className="flex flex-col gap-[5px]">
                                     <h5 className="text-[22px] font-semibold">
@@ -125,7 +128,9 @@ export default function DiscoverMoreNfts() {
                     </div>
                     
                     
+                    
 
+                </div>
                 </div>
                 <button className=" md:hidden border-2 border-[#A259FF] w-full h-[60px] rounded-[20px] flex items-center justify-center">
                             <div className="flex items-center justify-center gap-[12px]">
