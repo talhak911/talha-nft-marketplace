@@ -3,7 +3,7 @@ import DisplayNFTs from "../components/displayNFTs/DisplayNfts"
 export default function Category() {
     return (
         <>
-        <div className="px-[30px] py-[40px]  md:px-[90px] md:py-[60px] lg:px-[115px] lg:py-[80px]">
+        <div className="px-[30px] pt-[40px]  md:px-[90px] md:pt-[60px] lg:px-[115px] lg:pt-[80px] pb-[14px]">
             <div className="flex flex-col gap-[30px] mx-auto max-w-[1050px] ">
                 <div className="flex flex-col gap-[10px]">
                     <h2 className="font-semibold text-[28px] md:text-[38px] lg:text-[51px]">
@@ -37,6 +37,7 @@ export default function Category() {
            
         </div>
         <DisplayNFTs/>
+        <hr className="border border-[#2B2B2B]" />
         </>
     )
 }
