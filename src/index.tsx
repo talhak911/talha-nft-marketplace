@@ -11,6 +11,7 @@ import store from './store/Store'
 import { Provider } from 'react-redux'
 import Home from './pages/Home';
 import Category from './pages/Category';
+import NFTPage from './pages/NftPage';
 
 
 const router = createBrowserRouter([
@@ -27,8 +28,8 @@ const router = createBrowserRouter([
         element: <Category/>
       },
       {
-        path: "contact",
-        element: <div><h1>contact</h1></div>
+        path: "nft_page",
+        element: <NFTPage/>
       }
     ]
   }
