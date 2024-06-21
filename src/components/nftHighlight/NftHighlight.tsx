@@ -18,7 +18,7 @@ export default function NftHighlight() {
                 Magic Mashrooms
               </h3>
                 <div className="block md:hidden">
-                  <Timer1/>
+                  <Timer1 placeBid={false}/>
                 </div>
               <button className=" bg-white  w-full md:w-[198px] h-[60px] rounded-[20px] flex items-center justify-center">
                 <div className="flex items-center justify-center gap-[12px]">
@@ -28,7 +28,7 @@ export default function NftHighlight() {
               </button>
             </div>
             <div className=" hidden md:block content-end ">
-              <Timer1 />
+              <Timer1 placeBid={false}/>
             </div>
           </div>
         </div>
