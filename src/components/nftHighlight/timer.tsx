@@ -6,7 +6,7 @@ interface CountDownTime {
   seconds: string;
 }
 
-const Timer1: React.FC = () => {
+const Timer1: React.FC<{placeBid:boolean}> = ({ placeBid }: { placeBid: boolean }) => {
   const year = new Date().getFullYear().toString().substr(-2);
   const [countDownTime, setCountDownTime] = useState<CountDownTime>({
     hours: "00",
@@ -73,7 +73,7 @@ const Timer1: React.FC = () => {
   }, [startCountDown]);
 
   return (
-    <div className=" bg-opacity-50 bg-[#3B3B3B] w-full md:w-[295px] h-[144px] rounded-[30px] p-[30px]">
+    <div className=" bg-opacity-50 bg-[#3B3B3B] w-full md:w-[295px] h-fit rounded-[30px] p-[30px]">
     <div className="flex justify-center items-center ">
     <div className="flex justify-center flex-col gap-[10px]">
       <h4 className="text-[12px] leading-[13.2px]">
@@ -116,6 +116,7 @@ const Timer1: React.FC = () => {
           <p className=" text-[12px]">Seconds</p>
         </div>
       </div>
+      {placeBid && <button className="mt-[20px] font-semibold w-full h-[60px] flex items-center justify-center bg-[#A259FF] rounded-[20px]"> Place Bid</button>}
     </div>
   </div>
   </div>
