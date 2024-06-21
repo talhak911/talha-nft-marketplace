@@ -1,6 +1,6 @@
 export default function DisplayNFTs(){
  return(   <div className="bg-[#3B3B3B] px-[30px] py-[40px] md:px-[77px] md:py-[60px] lg:px-[115px]">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px] max-w-[1050px] mx-auto">
             <div className="flex flex-col  items-center justify-center h-[402px] md:h-[469px]">
                         {/* nft image */}
                         <div className=" h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[296px] bg-blue-800 rounded-t-[20px]">
