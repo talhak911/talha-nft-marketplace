@@ -7,10 +7,10 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import store from './store/Store'
+import {store} from './store/Store'
 import { Provider } from 'react-redux'
 import Home from './pages/Home';
-import Category from './pages/Category';
+import Category from './pages/Collection';
 import NFTPage from './pages/NftPage';
 
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "category",
+        path: "/:collectionSlug",
         element: <Category/>
       },
       {
@@ -39,9 +39,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
       <RouterProvider router={router} />
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>
 );
 

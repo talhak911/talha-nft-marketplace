@@ -1,7 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
+import collectionsReducer from "../store/slices/NftCollectionsSlice"
+import  NftsByCollectionReducer from "../store/slices/NftsByCollection"
 
 export  const store= configureStore({
-  reducer: {},
+  reducer: {
+    collectionsReducer,
+    NftsByCollectionReducer
+  },
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

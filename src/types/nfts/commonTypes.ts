@@ -1,4 +1,5 @@
-interface Collections  {
+// for collections
+export interface CollectionType  {
     collection: string,
     name: string,
     description: string,
@@ -25,5 +26,32 @@ interface Collections  {
       }
     ]
   }
-interface CollectionsState {
-    collections: Collections[]}
+export interface GetCollectionsResponse {
+    collections: CollectionType[],
+    next: string
+  }
+
+// for nfts and nfts within collection
+export interface NftType{
+  identifier: string;
+  collection: string;
+  contract: string;
+  token_standard: string;
+  name: string;
+  description: string;
+  image_url: string;
+  display_image_url: string;
+  display_animation_url: string;
+  metadata_url: string;
+  opensea_url: string;
+  updated_at: string;
+  is_disabled: boolean;
+  is_nsfw: boolean;
+}
+
+export interface GetNftsByCollectionResponse{
+    
+      nfts: NftType[],
+      next: string
+    
+  }

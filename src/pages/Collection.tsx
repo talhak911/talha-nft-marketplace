@@ -1,13 +1,29 @@
+import { useParams, Link } from 'react-router-dom';
+import { useAppSelector, useAppDispatch } from '../hooks/hooks'
+import { useEffect } from 'react';
 import { ReactComponent as Search } from "../assets/icons/search.svg"
 import DisplayNFTs from "../components/displayNFTs/DisplayNfts"
-export default function Category() {
+import { fetchNftsByCollection } from '../store/slices/NftsByCollection';
+export default function Collection() {
+    const { collectionSlug } = useParams();
+    let nfts = useAppSelector((state) => state.NftsByCollectionReducer.nfts.nfts)
+    const dispatch = useAppDispatch()
+      
+     useEffect(()=>{
+        nfts=[]
+        if(collectionSlug){
+            dispatch(fetchNftsByCollection(collectionSlug))
+        }
+        console.log(nfts)
+
+     },[collectionSlug,dispatch])
     return (
         <>
         <div className="px-[30px] pt-[40px]  md:px-[90px] md:pt-[60px] lg:px-[115px] lg:pt-[80px] pb-[14px]">
             <div className="flex flex-col gap-[30px] mx-auto max-w-[1050px] ">
                 <div className="flex flex-col gap-[10px]">
                     <h2 className="font-semibold text-[28px] md:text-[38px] lg:text-[51px]">
-                        [Category]
+                    { collectionSlug }
                     </h2>
                     <p className="text-[16px] lg:text-[22px]">
                         Browse through more than 50k NFTs on the NFT Marketplace.
@@ -36,7 +52,7 @@ export default function Category() {
             </div>
            
         </div>
-        <DisplayNFTs/>
+        <DisplayNFTs nfts={nfts}/>
         <hr className="border border-[#2B2B2B]" />
         </>
     )
