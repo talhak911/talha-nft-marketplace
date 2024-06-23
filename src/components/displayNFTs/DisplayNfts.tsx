@@ -3,6 +3,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { NftType } from "../../types/nfts/commonTypes";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import loading from "../../assets/loading.gif"
 export default function DisplayNFTs({
   nfts,
 }: {
@@ -32,13 +33,13 @@ export default function DisplayNFTs({
             {/* nft image */}
 
             {!loadedImages[key] && (
-              <div className="h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[238px] bg-slate-500 rounded-t-[20px] flex items-center justify-center">
-                <span>Loading...</span>{" "}
-                {/* You can replace this with a spinner */}
+              <div className="h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[238px] bg-black rounded-t-[20px] flex items-center justify-center">
+                <img src={loading} alt="" />
+                
               </div>
             )}
             <LazyLoadImage
-              className={`h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px]  md:h-fit  bg-slate-500 rounded-t-[20px] ${
+              className={`h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px]  md:h-fit  rounded-t-[20px] ${
                 loadedImages[key] ? "" : "hidden"
               }`}
               src={item.image_url}

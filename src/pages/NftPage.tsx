@@ -4,7 +4,7 @@ import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import { useEffect } from "react";
 import { fetchNft, clearNfts } from "../store/slices/NftSlice";
 import { ArtistName } from "../components/data/artistName";
-
+import loader from '../assets/loading.gif'
 export default function NFTPage(): JSX.Element {
   const { contract, identifier } = useParams();
   let nft = useAppSelector((state) => state.NftReducer.nft?.nft) || null;
@@ -20,7 +20,7 @@ export default function NFTPage(): JSX.Element {
   if (loading === "pending") {
     return (
       <div className="flex items-center justify-center h-screen">
-        <h5 className="text-4xl">Loading ...</h5>
+        <img src={loader} alt="" />
       </div>
     );
   }
