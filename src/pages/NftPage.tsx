@@ -2,8 +2,8 @@ import Timer1 from "../components/nftHighlight/timer";
 import { useParams, Link } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../hooks/hooks'
 import { useEffect,useState } from 'react';
-import { fetchNft } from "../store/slices/NftSlice";
-import { getNftParamsType } from "../types/nfts/commonTypes";
+import { fetchNft ,clearNfts} from "../store/slices/NftSlice";
+
 
 import { ArtistName } from "../components/data/artistName";
 
@@ -14,6 +14,7 @@ export default  function NFTPage () {
     let nft = useAppSelector((state) => state.NftReducer.nft?.nft)|| null
     const dispatch = useAppDispatch()
     useEffect(()=>{
+        dispatch(clearNfts())
       if(contract && identifier){ 
         dispatch(fetchNft({contract:contract,identifier:identifier}))
       }

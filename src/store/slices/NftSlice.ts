@@ -33,7 +33,9 @@ export const fetchNft = createAsyncThunk(
     name: 'nft',
     initialState,
     reducers: {
-  
+      clearNfts: (state) => {
+        state.nft = null;
+      },
     },
     extraReducers:(builder) => {
       // Add reducers for additional action types here, and handle loading state as needed
@@ -49,4 +51,5 @@ export const fetchNft = createAsyncThunk(
       })
     },
   })
+  export const { clearNfts } = nftSlice.actions;
   export default nftSlice.reducer

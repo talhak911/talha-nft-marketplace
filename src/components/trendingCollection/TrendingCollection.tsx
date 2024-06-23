@@ -21,16 +21,16 @@ export default function TrendingCollection(){
                     <p className="text-[16px] lg:text-[22px] ">Checkout our weekly updated trending collection.</p>
                 </div>
                     {/* cards */}
-                <div className="flex lg:flex-wrap gap-[30px] w-full justify-center ">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px] mx-auto justify-center ">
                     {/* single card */}
                     {collections?.map((item:CollectionType,index:number)=>
-                    <Link to={`${item.collection}`} key={index} className={`flex-col gap-[15px] ${index<1 ? "flex " : "hidden"} md:${index<2 ? "flex" :"hidden" } lg:flex`}>
-                    <img src={item?.image_url} className="  md:max-w-[330px] max-w-[315px] size-[315px] md:size-[330px] rounded-[20px]"/>
+                    <Link to={`${item.collection}`} key={index} className={`md:max-w-[330px] max-w-[315px] flex-col gap-[15px] lg:flex`}>
+                    <img src={item?.image_url} className=" w-full  size-[315px] md:size-[330px] rounded-[20px]"/>
 
                    
-                    {/* inner small cards */}
-                    <div className="flex gap-[15px]">
-                        {/* <img src={nfts[0]?.image_url} className=" size-[100px] rounded-[20px]"/> */}
+                    {/* inner small cards to match ui for extendibily*/}
+                    {/* <div className="flex justify-between gap-[15px]">
+                        
 
                         
                         <div className="bg-blue-500 w-[95px] h-[95px] md:max-w-[100px] md:max-h-[100px] rounded-[20px]">
@@ -43,22 +43,19 @@ export default function TrendingCollection(){
 
                         </div>
                        
-                    </div>
+                    </div> */}
 
-                    <div className="flex flex-col gap-[10px]">
+                    <div className="flex flex-col gap-[10px] mt-2">
                         <h5 className=" size-[22px] font-semibold w-full">
                             {item?.collection}
                         </h5>
                         <div className="flex gap-[12px]">
-                            <p>AV</p>
+                            <p>@</p>
                             <p className="text-[16px] ">{item?.name.slice(0,18)}</p>
                         </div>
                     </div>
                 </Link>
                     )}
-                   
-                   
-                   
                     
                 </div>
                 </div>

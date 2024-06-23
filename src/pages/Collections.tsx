@@ -11,6 +11,7 @@ export default function Collections() {
     const dispatch = useAppDispatch()
       
      useEffect(()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' })
         dispatch(clearNfts())
         if(collectionSlug){
             dispatch(fetchNftsByCollection(collectionSlug))
