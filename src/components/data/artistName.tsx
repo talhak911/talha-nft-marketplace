@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import { getArtistName } from "../../data/data";
 
 interface ArtistNameProps {
@@ -6,7 +6,7 @@ interface ArtistNameProps {
 }
 
 export const ArtistName: React.FC<ArtistNameProps> = ({ creator }) => {
-  const [artistName, setArtistName] = useState<string>('');
+  const [artistName, setArtistName] = useState<string>("");
 
   useEffect(() => {
     const fetchArtistName = async () => {
@@ -18,9 +18,5 @@ export const ArtistName: React.FC<ArtistNameProps> = ({ creator }) => {
     fetchArtistName();
   }, [creator]);
 
-  return (
-    <span className="text-[16px] lg:text-[22px]">
-     {artistName}
-    </span>
-  );
+  return <span className="text-[16px] lg:text-[22px]">{artistName}</span>;
 };

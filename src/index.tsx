@@ -1,18 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Layout from './Layout';
-import reportWebVitals from './reportWebVitals';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import {store} from './store/Store'
-import { Provider } from 'react-redux'
-import Home from './pages/Home';
-import Category from './pages/Collections';
-import NFTPage from './pages/NftPage';
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Layout from "./Layout";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { store } from "./store/Store";
+import { Provider } from "react-redux";
+import Home from "./pages/Home";
+import Category from "./pages/Collections";
+import NFTPage from "./pages/NftPage";
 
 const router = createBrowserRouter([
   {
@@ -21,21 +17,21 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/:collectionSlug",
-        element: <Category/>
+        element: <Category />,
       },
       {
         path: "/nft/:contract/:identifier",
-        element: <NFTPage/>
-      }
-    ]
-  }
+        element: <NFTPage />,
+      },
+    ],
+  },
 ]);
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>

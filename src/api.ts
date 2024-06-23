@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios from "axios";
 
 const openSeaApi = axios.create({
-    baseURL: 'https://api.opensea.io/api/v2/',
-    headers: {
-      accept: 'application/json',
-    },
-  });
+  baseURL: "https://api.opensea.io/api/v2/",
+  headers: {
+    accept: "application/json",
+  },
+});
 
-export default openSeaApi
+export default openSeaApi;

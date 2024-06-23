@@ -6,17 +6,16 @@ import TrendingCollection from "../components/trendingCollection/TrendingCollect
 import HowItWorks from "../components/howItWorks/HowItWorks";
 import SubscribeWidget from "../components/subscribeWidget/SubscribeWidget";
 
-export default function Home():JSX.Element{
-    return (
-        <>
-        <Hero/>
-        <TrendingCollection/>
-        <BrowseCategories/>
-        <DiscoverMoreNfts/>
-        <NftHighlight/>
-        <HowItWorks/>
-        <SubscribeWidget/>
-        
-        </>
-    )
+export default function Home(): JSX.Element {
+  return (
+    <>
+      <Hero />
+      <TrendingCollection />
+      <BrowseCategories />
+      <DiscoverMoreNfts />
+      <NftHighlight />
+      <HowItWorks />
+      <SubscribeWidget />
+    </>
+  );
 }
