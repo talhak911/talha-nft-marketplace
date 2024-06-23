@@ -33,6 +33,11 @@ export interface GetCollectionsResponse {
 }
 
 // for nfts within collection
+export interface fetchNftByCollectionParams {
+  collection_slug: string;
+  limit?: number
+}
+
 export interface NftType {
   identifier: string;
   collection: string;

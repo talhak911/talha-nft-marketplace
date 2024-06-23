@@ -1,15 +1,16 @@
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import { ReactComponent as User } from "../../assets/icons/user.svg";
 import { ReactComponent as Menu } from "../../assets/icons/burgerMenu.svg";
+import { Link } from "react-router-dom";
 function Navbar(): JSX.Element {
   return (
     <div className="flex justify-between items-center  text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[20px]">
-      <div className="flex items-center">
+      <Link to="/" className="flex items-center">
         <Logo className="h-[20px] lg:h-[30px] size-[32px] w-8 mr-2" />
         <h2 className="text-[14.85px] lg:text-[19.8px] font-bold">
           NFT marketplace
         </h2>
-      </div>
+      </Link>
 
       <div className="hidden lg:block">
         <ul className=" flex space-x-[36px] ml-auto items-center font-medium">

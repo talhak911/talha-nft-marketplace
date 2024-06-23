@@ -1,19 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { GetNftsByCollectionResponse } from "../../types/nfts/commonTypes";
+import { GetNftsByCollectionResponse, fetchNftByCollectionParams } from "../../types/nfts/commonTypes";
 import { NftsByCollectionState } from "../../types/redux/commonTypes";
 import openSeaApi from "../../api";
 
 export const fetchNftsByCollection = createAsyncThunk<
   GetNftsByCollectionResponse,
-  string,
+  fetchNftByCollectionParams,
   { rejectValue: string }
 >(
   "NftsByCollection/fetchNftsByCollection",
-  async (collection_slug: string, { rejectWithValue }) => {
+async ({ collection_slug, limit }: fetchNftByCollectionParams, { rejectWithValue }) => {
     try {
       const response = await openSeaApi.get<GetNftsByCollectionResponse>(
-        `/collection/${collection_slug}/nfts?limit=12`,
+        `/collection/${collection_slug}/nfts?limit=${limit}`,
         {
           method: "GET",
           headers: { "x-api-key": `${process.env.REACT_APP_OPEN_SEA_KEY}` },

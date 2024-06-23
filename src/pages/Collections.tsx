@@ -10,15 +10,14 @@ import {
 
 export default function Collections(): JSX.Element {
   const { collectionSlug } = useParams();
-  let nfts =
-    useAppSelector((state) => state.NftsByCollectionReducer.nfts?.nfts) || null;
+  let nfts = useAppSelector((state) => state.NftsByCollectionReducer.nfts?.nfts) || null;
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     dispatch(clearNfts());
     if (collectionSlug) {
-      dispatch(fetchNftsByCollection(collectionSlug));
+      dispatch(fetchNftsByCollection({collection_slug:collectionSlug,limit:9}));
     }
   }, [collectionSlug, dispatch]);
 
