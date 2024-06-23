@@ -10,7 +10,7 @@ import {
 import {store} from './store/Store'
 import { Provider } from 'react-redux'
 import Home from './pages/Home';
-import Category from './pages/Collection';
+import Category from './pages/Collections';
 import NFTPage from './pages/NftPage';
 
 
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <Category/>
       },
       {
-        path: "nft_page",
+        path: "/nft/:contract/:identifier",
         element: <NFTPage/>
       }
     ]

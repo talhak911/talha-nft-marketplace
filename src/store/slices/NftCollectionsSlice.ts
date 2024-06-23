@@ -10,7 +10,7 @@ export const fetchCollections = createAsyncThunk(
   'NftCollections/fetchCollections',
   async (_,{rejectWithValue}) => {
     try{
-      const response = await axios.get<GetCollectionsResponse>('https://api.opensea.io/api/v2/collections?limit=6&order_by=market_cap', {
+      const response = await axios.get<GetCollectionsResponse>('https://api.opensea.io/api/v2/collections??chain=ethereum&order_by=seven_day_volume&limit=6', {
         method: 'GET',
         headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
         
@@ -27,10 +27,7 @@ export const fetchCollections = createAsyncThunk(
 
 
 const initialState:CollectionsState = {
-  collections: {
-    collections:[],
-    next:""
-  },
+  collections: null,
   loading: 'idle',
   error:null
 } 
@@ -39,7 +36,7 @@ export const collectionsSlice = createSlice({
   name: 'collection',
   initialState,
   reducers: {
-
+   
   },
   extraReducers:(builder) => {
     // Add reducers for additional action types here, and handle loading state as needed
@@ -60,6 +57,5 @@ export const collectionsSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const {  } = collectionsSlice.actions
 
 export default collectionsSlice.reducer

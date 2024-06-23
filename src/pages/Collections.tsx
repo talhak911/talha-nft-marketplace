@@ -3,14 +3,15 @@ import { useAppSelector, useAppDispatch } from '../hooks/hooks'
 import { useEffect } from 'react';
 import { ReactComponent as Search } from "../assets/icons/search.svg"
 import DisplayNFTs from "../components/displayNFTs/DisplayNfts"
-import { fetchNftsByCollection } from '../store/slices/NftsByCollection';
-export default function Collection() {
+import { fetchNftsByCollection,clearNfts } from '../store/slices/NftsByCollectionSllice';
+
+export default function Collections() {
     const { collectionSlug } = useParams();
-    let nfts = useAppSelector((state) => state.NftsByCollectionReducer.nfts.nfts)
+    let nfts = useAppSelector((state) => state.NftsByCollectionReducer.nfts?.nfts) || null
     const dispatch = useAppDispatch()
       
      useEffect(()=>{
-        nfts=[]
+        dispatch(clearNfts())
         if(collectionSlug){
             dispatch(fetchNftsByCollection(collectionSlug))
         }

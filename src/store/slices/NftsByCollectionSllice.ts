@@ -23,10 +23,7 @@ export const fetchNftsByCollection = createAsyncThunk(
   )
 
   const initialState:NftsByCollectionState = {
-   nfts:{
-    nfts: [],
-    next: ""
-   },
+    nfts:null,
     loading: 'idle',
     error:null
   } 
@@ -35,7 +32,9 @@ export const fetchNftsByCollection = createAsyncThunk(
     name: 'nftsByCollection',
     initialState,
     reducers: {
-  
+      clearNfts: (state) => {
+        state.nfts = null;
+      },
     },
     extraReducers:(builder) => {
       // Add reducers for additional action types here, and handle loading state as needed
@@ -51,4 +50,6 @@ export const fetchNftsByCollection = createAsyncThunk(
       })
     },
   })
+  export const { clearNfts } = nftsByCollectionSlice.actions;
+
   export default nftsByCollectionSlice.reducer

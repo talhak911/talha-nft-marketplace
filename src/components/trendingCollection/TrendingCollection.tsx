@@ -4,7 +4,7 @@ import {fetchCollections} from '../../store/slices/NftCollectionsSlice'
 import { CollectionType } from '../../types/nfts/commonTypes';
 import { Link } from 'react-router-dom';
 export default function TrendingCollection(){
-    const collections = useAppSelector((state) => state.collectionsReducer.collections.collections)
+    const collections = useAppSelector((state) => state.collectionsReducer.collections?.collections)
     const dispatch = useAppDispatch()
     
      useEffect(()=>{

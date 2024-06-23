@@ -1,13 +1,19 @@
-import {  GetCollectionsResponse, GetNftsByCollectionResponse } from "../nfts/commonTypes"
+import {  GetCollectionsResponse, GetNftResponse, GetNftsByCollectionResponse } from "../nfts/commonTypes"
 
 export interface CollectionsState {
-    collections: GetCollectionsResponse
+    collections: GetCollectionsResponse |null
     loading: 'idle' | 'pending' | 'succeeded' | 'failed'
     error:string | null
   }
 
 export interface NftsByCollectionState{
-  nfts: GetNftsByCollectionResponse
+  nfts: GetNftsByCollectionResponse | null
+  loading: 'idle' | 'pending' | 'succeeded' | 'failed'
+  error:string | null
+}
+
+export interface NftState{
+  nft:GetNftResponse | null
   loading: 'idle' | 'pending' | 'succeeded' | 'failed'
   error:string | null
 }
