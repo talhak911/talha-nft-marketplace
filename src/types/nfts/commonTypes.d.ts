@@ -26,6 +26,7 @@ export interface CollectionType  {
       }
     ]
   }
+
 export interface GetCollectionsResponse {
     collections: CollectionType[],
     next: string
@@ -57,9 +58,6 @@ export interface GetNftsByCollectionResponse{
   }
 
 // nft
-
-
-
   interface Trait {
     trait_type: string;
     display_type: string;
@@ -113,6 +111,22 @@ export interface getNftParamsType{
   identifier: string;
   contract: string;
 }
-  export interface GetNftResponse{
+
+export interface GetNftResponse{
     nft: SingleNftType;
+  }
+
+  // for owner info
+export interface AccountInfoResponseType {
+    address: string;
+    username: string;
+    profile_image_url: string;
+    banner_image_url: string;
+    website: string;
+    social_media_accounts: {
+      platform: string;
+      username: string;
+    }[];
+    bio: string;
+    joined_date: string;
   }

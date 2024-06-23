@@ -2,26 +2,26 @@
 import {createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 import type { CollectionsState } from '../../types/redux/commonTypes'
-
+import openSeaApi from '../../api'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { GetCollectionsResponse } from '../../types/nfts/commonTypes'
 
-export const fetchCollections = createAsyncThunk(
+export const fetchCollections = createAsyncThunk<GetCollectionsResponse, void,{ rejectValue: string }>(
   'NftCollections/fetchCollections',
   async (_,{rejectWithValue}) => {
     try{
-      const response = await axios.get<GetCollectionsResponse>('https://api.opensea.io/api/v2/collections??chain=ethereum&order_by=seven_day_volume&limit=6', {
+      const response = await openSeaApi.get<GetCollectionsResponse>('/collections??chain=ethereum&order_by=seven_day_volume&limit=6', {
         method: 'GET',
         headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
         
-      })
-   
-      return response.data as GetCollectionsResponse
+      })   
+      return response.data
     }
     catch (error) {
       return rejectWithValue('There was an error fetching the data');
     }
   },
+
 )
 
 

@@ -3,13 +3,14 @@ import axios from 'axios'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { GetNftResponse, getNftParamsType } from '../../types/nfts/commonTypes'
 import { NftState } from '../../types/redux/commonTypes'
+import { AxiosResponse } from "axios";
+import openSeaApi from '../../api'
 
-
-export const fetchNft = createAsyncThunk(
+export const fetchNft = createAsyncThunk<GetNftResponse, getNftParamsType,{rejectValue:string}>(
     'Nft/fetchNft',
     async (data:getNftParamsType,{rejectWithValue}) => {
       try{
-        const response = await axios.get<GetNftResponse>(`https://api.opensea.io/api/v2/chain/ethereum/contract/${data.contract}/nfts/${data.identifier}`, {
+        const response:AxiosResponse<GetNftResponse>  = await openSeaApi.get<GetNftResponse>(`/chain/ethereum/contract/${data.contract}/nfts/${data.identifier}`, {
           method: 'GET',
           headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
           

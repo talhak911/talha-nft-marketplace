@@ -3,14 +3,15 @@ import axios from 'axios'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { GetNftsByCollectionResponse } from '../../types/nfts/commonTypes'
 import { NftsByCollectionState } from '../../types/redux/commonTypes'
+import openSeaApi from '../../api'
 
-export const fetchNftsByCollection = createAsyncThunk(
+export const fetchNftsByCollection = createAsyncThunk<GetNftsByCollectionResponse, string,{ rejectValue: string }>(
     'NftsByCollection/fetchNftsByCollection',
     async (collection_slug:string,{rejectWithValue}) => {
       try{
-        const response = await axios.get<GetNftsByCollectionResponse>(`https://api.opensea.io/api/v2/collection/${collection_slug}/nfts?limit=12`, {
+        const response = await openSeaApi.get<GetNftsByCollectionResponse>(`/collection/${collection_slug}/nfts?limit=12`, {
           method: 'GET',
-          headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
+          headers: { 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
           
         })
       

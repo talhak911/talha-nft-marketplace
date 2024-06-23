@@ -19,8 +19,8 @@ export const ArtistName: React.FC<ArtistNameProps> = ({ creator }) => {
   }, [creator]);
 
   return (
-    <span className="font-mono text-[16px] text-[#858584] md:text-[22px]">
-      Created By {artistName}
+    <span className="text-[16px] lg:text-[22px]">
+     {artistName}
     </span>
   );
 };

@@ -1,32 +1,32 @@
 import Timer1 from "../components/nftHighlight/timer";
-import { useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useAppSelector, useAppDispatch } from '../hooks/hooks'
 import { useEffect } from 'react';
-import { fetchNft ,clearNfts} from "../store/slices/NftSlice";
+import { fetchNft, clearNfts } from "../store/slices/NftSlice";
 import { ArtistName } from "../components/data/artistName";
 
-export default  function NFTPage ():JSX.Element {
+export default function NFTPage(): JSX.Element {
     const { contract, identifier } = useParams()
-    let nft = useAppSelector((state) => state.NftReducer.nft?.nft)|| null
+    let nft = useAppSelector((state) => state.NftReducer.nft?.nft) || null
     const loading = useAppSelector((state) => state.NftReducer.loading);
     const dispatch = useAppDispatch()
-    useEffect(()=>{
+    useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
         dispatch(clearNfts())
-      if(contract && identifier){ 
-        dispatch(fetchNft({contract:contract,identifier:identifier}))
-      }
-     },[dispatch])
-     if (loading === 'pending') {
+        if (contract && identifier) {
+            dispatch(fetchNft({ contract: contract, identifier: identifier }))
+        }
+    }, [dispatch])
+    if (loading === 'pending') {
         return <div className="flex items-center justify-center h-screen"><h5 className="text-4xl">Loading ...</h5></div>;
-      }
-      if (!nft) {
-        return <div className="flex items-center justify-center h-screen"><h5 className="text-4xl">No data found.</h5></div>; 
-      }
+    }
+    if (!nft) {
+        return <div className="flex items-center justify-center h-screen"><h5 className="text-4xl">No data found.</h5></div>;
+    }
     return (
         <div>
             <img className=" w-full h-[320px] md:h-[420px] lg:h-[560px] bg-slate-600" src={nft.display_image_url} alt="" />
-          
+
             {/* page start */}
             <div className=" px-[30px] py-[40px]  md:px-[72px] lg:px-[115px]">
                 <div className="relative flex justify-center md:justify-start mx-auto max-w-[1050px] " >
@@ -39,15 +39,17 @@ export default  function NFTPage ():JSX.Element {
                             <h2 className="text-[28px] md:text-[38px] lg:text-[51px] font-semibold">{nft.name}</h2>
                             <span className="text-[#858584] text-[16px] lg:text-[22px] ">Minted on {nft.updated_at.split("T")[0]}</span>
                         </div>
-                        <div className="block md:hidden"> <Timer1 placeBid={true}/> </div>
+                        <div className="block md:hidden"> <Timer1 placeBid={true} /> </div>
 
                         {/* Created by */}
                         <div className="flex flex-col gap-[10px]">
-                            {nft.creator}
-                            <ArtistName creator={nft.creator} />
+                            <span className="font-mono text-[16px] text-[#858584] md:text-[22px]">
+                                Created By 
+                            </span>
+                           
                             <div className="flex items-center gap-[12px]">
                                 <span>@</span>
-                                <span className="text-[16px] lg:text-[22px]"> Artist Name</span>
+                                <ArtistName creator={nft.creator}/>
                             </div>
                         </div>
                         {/* Description */}
@@ -56,7 +58,7 @@ export default  function NFTPage ():JSX.Element {
                             <div className="flex items-center gap-[12px]">
                                 <p className="text-[16px] lg:text-[22px]">
                                     {nft.description || "no description found"}
-                                     </p>
+                                </p>
                             </div>
                         </div>
 
@@ -77,7 +79,7 @@ export default  function NFTPage ():JSX.Element {
                         {/* Tags */}
                         <div className="flex flex-col gap-[10px]">
                             <span className=" font-mono text-[16px] text-[#858584] md:text-[22px]">Tags</span>
-                            
+
                             <div className="flex flex-col lg:flex-row gap-[20px]">
                                 <div className="py-[12px] px-[30px] bg-[#3B3B3B] capitalize w-fit rounded-[20px]">
                                     Animation
@@ -92,13 +94,13 @@ export default  function NFTPage ():JSX.Element {
                                     Animation
                                 </div>
                             </div>
-                           
+
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
     )
 
-  
+
 }
