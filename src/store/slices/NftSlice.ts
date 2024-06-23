@@ -14,7 +14,6 @@ export const fetchNft = createAsyncThunk(
           headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
           
         })
-        console.log(response)
         return response.data 
       }
       catch (error) {
@@ -38,17 +37,19 @@ export const fetchNft = createAsyncThunk(
       },
     },
     extraReducers:(builder) => {
-      // Add reducers for additional action types here, and handle loading state as needed
-      builder.addCase(fetchNft.fulfilled, (state, action: PayloadAction<GetNftResponse>) => {
-        // Add user to the state array
-        state.nft=(action.payload)
+      builder
+      .addCase(fetchNft.pending, (state) => {
+        state.loading = 'pending'; // Set loading state to 'pending' when request starts
       })
-      .addCase(fetchNft.rejected,(state,action)=>{
-        if (action.payload) {
-          // Being that we passed in ValidationErrors to rejectType in `createAsyncThunk`, the payload will be available here.
-          state.error = action.payload as string
-        }
+      .addCase(fetchNft.fulfilled, (state, action: PayloadAction<GetNftResponse>) => {
+        state.nft = action.payload; // Update state with fetched data on success
+        state.loading = 'succeeded'; // Set loading state to 'succeeded' after successful fetch
+        state.error = null; // Reset error state on successful fetch
       })
+      .addCase(fetchNft.rejected, (state, action) => {
+        state.loading = 'failed'; // Set loading state to 'failed' on fetch failure
+        state.error = action.payload as string; // Store error message in state
+      });
     },
   })
   export const { clearNfts } = nftSlice.actions;

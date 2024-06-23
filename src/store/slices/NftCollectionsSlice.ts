@@ -15,7 +15,7 @@ export const fetchCollections = createAsyncThunk(
         headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
         
       })
-      console.log(response)
+   
       return response.data as GetCollectionsResponse
     }
     catch (error) {

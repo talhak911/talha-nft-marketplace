@@ -13,7 +13,7 @@ export const fetchNftsByCollection = createAsyncThunk(
           headers: {accept: 'application/json', 'x-api-key': `${process.env.REACT_APP_OPEN_SEA_KEY}`}
           
         })
-        console.log(response)
+      
         return response.data as GetNftsByCollectionResponse
       }
       catch (error) {

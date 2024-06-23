@@ -9,7 +9,7 @@ export default function TrendingCollection(){
     
      useEffect(()=>{
         dispatch(fetchCollections())
-        console.log(collections)
+    
 
      },[ dispatch])
        //{process.env.REACT_APP_OPEN_SEA_KEY}
