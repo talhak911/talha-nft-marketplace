@@ -4,7 +4,7 @@ import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import { useEffect } from "react";
 import { fetchNft, clearNfts } from "../store/slices/NftSlice";
 import { ArtistName } from "../components/data/artistName";
-import loader from '../assets/loading.gif'
+import loader from '../assets/loadingRocket.gif'
 export default function NFTPage(): JSX.Element {
   const { contract, identifier } = useParams();
   let nft = useAppSelector((state) => state.NftReducer.nft?.nft) || null;
