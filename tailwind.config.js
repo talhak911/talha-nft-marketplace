@@ -13,6 +13,7 @@ module.exports = {
       },
       screens: {
         xsm: '375px', 
+        lg2:'1220px'
       },
       backgroundImage: {
         'nft-mobile': "url('/src/assets/nftHighlightImageMobile.png')",
