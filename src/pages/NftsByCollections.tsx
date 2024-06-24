@@ -8,7 +8,7 @@ import {
   clearNfts,
 } from "../store/slices/NftsByCollectionSllice";
 
-export default function Collections(): JSX.Element {
+export default function NftsCollections(): JSX.Element {
   const { collectionSlug } = useParams();
   let nfts = useAppSelector((state) => state.NftsByCollectionReducer.nfts?.nfts) || null;
   const dispatch = useAppDispatch();
