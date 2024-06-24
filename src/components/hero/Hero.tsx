@@ -21,12 +21,12 @@ export default function Hero(): JSX.Element {
             <Rocket /> Get Started
           </button>
           <div className="mx-auto md:mx-[0px]">
-            <div className="flex gap-[30px]">
+            <div className="flex gap-[30px] font-mono">
               <div className="flex flex-col rounded-[20px] ">
                 <span className="font-bold text-[22px]  lg:text-[28px] capitalize text-white">
                   240k+
                 </span>
-                <span className="font-normal text-[16px]  lg:text-[24px]  capitalize text-white">
+                <span className="font-sans text-[16px]  lg:text-[24px]  capitalize text-white">
                   Total Sale
                 </span>
               </div>
@@ -34,7 +34,7 @@ export default function Hero(): JSX.Element {
                 <span className="font-bold text-[22px]  lg:text-[28px] capitalize text-white">
                   100k+
                 </span>
-                <span className="font-normal text-[16px]  lg:text-[24px]  capitalize text-white">
+                <span className=" font-sans text-[16px]  lg:text-[24px]  capitalize text-white">
                   Auctions
                 </span>
               </div>
@@ -42,7 +42,7 @@ export default function Hero(): JSX.Element {
                 <span className="font-bold text-[22px]  lg:text-[28px] capitalize text-white">
                   240k+
                 </span>
-                <span className="font-normal text-[16px]  lg:text-[24px] capitalize text-white">
+                <span className="font-sans text-[16px]  lg:text-[24px] capitalize text-white">
                   Artists
                 </span>
               </div>
