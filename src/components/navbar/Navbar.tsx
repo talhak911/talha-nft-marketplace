@@ -8,7 +8,7 @@ function Navbar(): JSX.Element {
       <Link to="/" className="flex items-center">
         <Logo className="h-[20px] lg:h-[30px] size-[32px] w-8 mr-2" />
         <h2 className="text-[14.85px] lg:text-[19.8px] font-bold">
-          NFT marketplace
+          NFT Marketplace
         </h2>
       </Link>
 
