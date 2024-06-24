@@ -1,5 +1,6 @@
 import astronautImage from "../../assets/astronautImage.png";
 import { ReactComponent as EnvelopIcon } from "../../assets/icons/envelope.svg";
+
 export default function SubscribeWidget(): JSX.Element {
   return (
     <div className="px-[30px] py-[40px] md:px-[72px] md:py-[80px] lg:px-[115px] lg:py-[40px]">

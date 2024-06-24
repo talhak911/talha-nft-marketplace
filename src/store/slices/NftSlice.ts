@@ -17,7 +17,6 @@ export const fetchNft = createAsyncThunk<
         {
           method: "GET",
           headers: {
-            accept: "application/json",
             "x-api-key": `${process.env.REACT_APP_OPEN_SEA_KEY}`,
           },
         }
@@ -45,19 +44,19 @@ export const nftSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchNft.pending, (state) => {
-        state.loading = "pending"; // Set loading state to 'pending' when request starts
+        state.loading = "pending";
       })
       .addCase(
         fetchNft.fulfilled,
         (state, action: PayloadAction<GetNftResponse>) => {
-          state.nft = action.payload; // Update state with fetched data on success
-          state.loading = "succeeded"; // Set loading state to 'succeeded' after successful fetch
-          state.error = null; // Reset error state on successful fetch
+          state.nft = action.payload; 
+          state.loading = "succeeded"; 
+          state.error = null; 
         }
       )
       .addCase(fetchNft.rejected, (state, action) => {
-        state.loading = "failed"; // Set loading state to 'failed' on fetch failure
-        state.error = action.payload as string; // Store error message in state
+        state.loading = "failed"; 
+        state.error = action.payload as string;
       });
   },
 });
