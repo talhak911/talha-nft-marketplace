@@ -55,7 +55,7 @@ export default function DisplayNFTs({
 
                   <div className="flex gap-[10px]">
                     <span>@</span>
-                    <span className="text-[16px]"> Artist </span>
+                    <span className="text-[16px] font-mono"> Artist </span>
                   </div>
                 </div>
                 <div className="flex justify-between">
