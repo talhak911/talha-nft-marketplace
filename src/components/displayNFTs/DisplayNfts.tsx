@@ -33,7 +33,7 @@ export default function DisplayNFTs({
             {/* nft image */}
 
             {!loadedImages[key] && (
-              <div className=" h-[238px] md:h-[295px]  w-full min-w-[315px]  md:min-w-[330px]   bg-black rounded-t-[20px] flex items-center justify-center">
+              <div className=" h-[238px] md:h-[295px]   w-[315px]  md:w-[330px]   bg-black rounded-t-[20px] flex items-center justify-center">
                 <img src={loading} alt="" />
                 
               </div>
