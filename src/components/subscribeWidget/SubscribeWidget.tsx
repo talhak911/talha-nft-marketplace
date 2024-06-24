@@ -18,15 +18,15 @@ export default function SubscribeWidget(): JSX.Element {
                 <h4 className=" font-semibold text-[28px] lg:text-[38px] capitalize">
                   Join our weekly digest
                 </h4>
-                <span className="text-[16px] lg:text-[22px] font-normal ">
+                <span className="text-[16px] lg:text-[22px] font-normal capitalize ">
                   Get exclusive promotions & updates straight to your inbox.
                 </span>
               </div>
               <div className="flex flex-col lg:flex-row gap-[16px] lg:gap-0 justify-between lg:bg-white rounded-[20px]">
                 <input
-                  className="text-[#2B2B2B] h-[46px] rounded-[20px] py-[16px] px-[20px] border border-[#858584] lg:border-none  lg:focus:outline-none "
+                  className="text-[#2B2B2B]  placeholder-opacity-100 h-[46px] rounded-[20px] py-[16px] px-[20px] border border-[#858584] lg:border-none  lg:focus:outline-none "
                   type="text"
-                  placeholder="Enter Your Email Address"
+                  placeholder ="Enter your email here"
                 />
 
                 <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-[#A259FF] lg:w-[211px] ">

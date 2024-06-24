@@ -12,7 +12,7 @@ export default function Footer(): JSX.Element {
         <div className="flex flex-col gap-[20px] lg:max-w-[327.41px]">
           <div className="flex items-center">
             <Logo className="size-[32px] mr-2" />
-            <h2 className="text-[14.85px] lg:text-[19.8px] font-bold">
+            <h2 className="text-[14.85px] lg:text-[19.8px] font-bold font-mono">
               NFT marketplace
             </h2>
           </div>
@@ -34,14 +34,14 @@ export default function Footer(): JSX.Element {
         </div>
 
         <div className="flex flex-col gap-[20px] text-[#CCCCCC] lg:w-[240px]">
-          <h4 className="font-bold text-[22px] text-white ">Explore</h4>
+          <h4 className="font-bold text-[22px] text-white font-mono capitalize">Explore</h4>
           <span >Marketplace</span>
           <span>Rankings</span>
           <span >Connect a wallet</span>
         </div>
 
         <div className="flex flex-col gap-[20px] text-[#CCCCCC]">
-          <h4 className="font-bold text-[22px] text-white ">
+          <h4 className="font-bold text-[22px] text-white font-mono capitalize">
             Join our weekly digest
           </h4>
           <span>
@@ -51,12 +51,12 @@ export default function Footer(): JSX.Element {
             <input
               className=" text-[#2B2B2B] h-[46px] rounded-[20px] py-[16px] px-[20px] border border-[#858584] md:border-none  md:focus:outline-none "
               type="text"
-              placeholder="Enter Your Email Address"
+              placeholder="Enter your email here"
             />
 
             <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-[#A259FF] md:w-[211px] ">
               <EnvelopIcon />
-              <span>Subscribe</span>
+              <span className="font-semibold text-white">Subscribe</span>
             </button>
           </div>
         </div>
