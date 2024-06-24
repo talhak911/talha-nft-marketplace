@@ -28,18 +28,18 @@ export default function DisplayNFTs({
           <Link
             to={`/nft/${item.contract}/${item.identifier}`}
             key={key}
-            className="flex flex-col  items-center justify-center  h-fit"
+            className="flex flex-col  items-center md:max-w-[330px] justify-center  h-fit"
           >
             {/* nft image */}
 
             {!loadedImages[key] && (
-              <div className="h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px] md:h-[238px] bg-black rounded-t-[20px] flex items-center justify-center">
+              <div className=" h-[238px] md:h-[295px]  w-full min-w-[315px]  md:min-w-[330px]   bg-black rounded-t-[20px] flex items-center justify-center">
                 <img src={loading} alt="" />
                 
               </div>
             )}
             <LazyLoadImage
-              className={`h-[238px] w-full min-w-[295px] max-w-[315px] md:max-w-[330px]  md:h-fit  rounded-t-[20px] ${
+              className={`h-[238px] md:h-[295px] w-full min-w-[315px]  md:min-w-[330px]   rounded-t-[20px] ${
                 loadedImages[key] ? "" : "hidden"
               }`}
               src={item.image_url}
@@ -48,7 +48,7 @@ export default function DisplayNFTs({
               onLoad={() => handleImageLoad(key)}
             />
 
-            <div className=" h-fit w-full min-w-[295px] max-w-[315px] md:max-w-[330px] bg-[#2B2B2B] rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]">
+            <div className=" h-fit w-full min-w-[315px] md:w-[330px] max-w-[315px] md:max-w-[330px] bg-[#2B2B2B] rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]">
               <div className="flex flex-col gap-[25px]">
                 <div className="flex flex-col gap-[5px]">
                   <h5 className="text-[22px] font-semibold">{item.name}</h5>
