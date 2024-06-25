@@ -1,5 +1,5 @@
-import { useAppSelector, useAppDispatch } from "../../hooks/hooks";
-import { useEffect } from "react";
+import { useAppDispatch } from "../../hooks/hooks";
+import React, { useEffect } from "react";
 import { ReactComponent as EyeIcon } from "../../assets/icons/eye.svg";
 import DisplayNFTs from "../../components/displayNFTs/DisplayNfts";
 import {
@@ -9,8 +9,7 @@ import {
 import { Link } from "react-router-dom";
 
 
-export default function DiscoverMoreNfts(): JSX.Element {
-  let nfts = useAppSelector((state) => state.NftsByCollectionReducer.nfts?.nfts) || null;
+export default function DiscoverMoreNfts(): React.JSX.Element {
   const dispatch = useAppDispatch();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -41,7 +40,7 @@ export default function DiscoverMoreNfts(): JSX.Element {
           </div>
         </div>
         <div className="mx-[-30px] md:mx-[-72px] lg:mx-[-115px]">
-      <DisplayNFTs nfts={nfts} />
+      <DisplayNFTs  />
     </div>
 
         <button className=" md:hidden border-2 border-[#A259FF] w-full h-[60px] rounded-[20px] flex items-center justify-center">

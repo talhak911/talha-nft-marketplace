@@ -59,7 +59,7 @@ export default function NftsCollections(): JSX.Element {
           </div>
         </div>
       </div>
-      <DisplayNFTs nfts={nfts} />
+      <DisplayNFTs/>
       <hr className="border border-[#2B2B2B]" />
     </>
   );

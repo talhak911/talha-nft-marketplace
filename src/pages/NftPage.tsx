@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import { useEffect } from "react";
 import { fetchNft, clearNfts } from "../store/slices/NftSlice";
-import { ArtistName } from "../components/data/artistName";
+import { ArtistName } from "../components/data/ArtistName";
 import loader from '../assets/loadingRocket.gif'
 export default function NFTPage(): JSX.Element {
   const { contract, identifier } = useParams();
