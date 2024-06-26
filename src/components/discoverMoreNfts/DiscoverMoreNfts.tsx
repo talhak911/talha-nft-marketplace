@@ -33,7 +33,7 @@ export default function DiscoverMoreNfts(): React.JSX.Element {
           </div>
         </div>
         <div className="mx-[-30px] md:mx-[-72px] lg:mx-[-115px]">
-          {error && <span>{error}</span>}
+          {error && <span className="flex items-center justify-center h-11"><p>{error}</p></span>}
           {loading === 'pending' && <Loader/>}
           <DisplayNFTs nfts={nfts?.nfts} />
 
