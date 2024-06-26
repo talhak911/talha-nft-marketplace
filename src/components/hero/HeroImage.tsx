@@ -16,7 +16,7 @@ export default function HeroImage(): JSX.Element {
           alt=""
         />
 
-        <figcaption className="h-[109px] bg-[#3B3B3B] p-[20px]  text-white rounded-b-2xl">
+        <figcaption className="h-[109px] bg-bgSecondary p-[20px]  rounded-b-2xl">
           <h5 className="font-semibold text-[22px]">{collections[0].collection}</h5>
           <div className="flex gap-2 text-[16px]">
             <p>@</p>

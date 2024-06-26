@@ -14,7 +14,7 @@ import { ReactComponent as SportIcon } from "../../assets/categoriesData/icons/s
 import { ReactComponent as VirtualWordsIcon } from "../../assets/categoriesData/icons/virtualWords.svg";
 import { ReactComponent as VideoIcon } from "../../assets/categoriesData/icons/video.svg";
 import { ReactComponent as MusicIcon } from "../../assets/categoriesData/icons/music.svg";
-import { CategoryItem } from "../../types/commonTypes";
+import { CategoryItem } from "../../types/types";
 
 export const categoryItems: CategoryItem[] = [
     {

@@ -14,12 +14,12 @@ function Navbar(): JSX.Element {
 
       <div className="hidden lg:block">
         <ul className=" flex space-x-[36px] ml-auto items-center font-medium">
-          <li className="hover:text-gray-400 cursor-pointer">Marketplace</li>
-          <li className="hover:text-gray-400 cursor-pointer">Rankings</li>
-          <li className="hover:text-gray-400 cursor-pointer">
+          <li className="hover:text-caption cursor-pointer">Marketplace</li>
+          <li className="hover:text-caption cursor-pointer">Rankings</li>
+          <li className="hover:text-caption cursor-pointer">
             Connect a wallet
           </li>
-          <button className="bg-[#A259FF] rounded-2xl py-3 px-7 flex items-center gap-2">
+          <button className="bg-callToAction rounded-2xl py-3 px-7 flex items-center gap-2">
             {" "}
             <User />
             Sign Up

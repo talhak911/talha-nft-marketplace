@@ -7,7 +7,7 @@ import { ReactComponent as EnvelopIcon } from "../../assets/icons/envelope.svg";
 
 export default function Footer(): JSX.Element {
   return (
-    <div className="px-[30px] py-[40px] md:px-[72px]  lg:px-[115px]  bg-[#3B3B3B]">
+    <div className="px-[30px] py-[40px] md:px-[72px]  lg:px-[115px]  bg-bgSecondary">
       <div className="flex flex-col lg:flex-row mx-auto max-w-[1050px] gap-[30px] lg:justify-between">
         <div className="flex flex-col gap-[20px] lg:max-w-[327.41px]">
           <div className="flex items-center">
@@ -17,11 +17,11 @@ export default function Footer(): JSX.Element {
             </h2>
           </div>
 
-          <span className="text-[16px] text-[#CCCCCC]">
+          <span className="text-[16px] text-footerText">
             NFT marketplace UI created with Anima for Figma.
           </span>
           <div className="flex flex-col gap-[15px]">
-            <span className="text-[16px] text-[#CCCCCC]">
+            <span className="text-[16px] text-footerText">
               Join our community
             </span>
             <div className="flex gap-[10px]">
@@ -33,14 +33,14 @@ export default function Footer(): JSX.Element {
           </div>
         </div>
 
-        <div className="flex flex-col gap-[20px] text-[#CCCCCC] lg:w-[240px]">
+        <div className="flex flex-col gap-[20px] text-footerText lg:w-[240px]">
           <h4 className="font-bold text-[22px] text-white font-mono capitalize">Explore</h4>
           <span >Marketplace</span>
           <span>Rankings</span>
           <span >Connect a wallet</span>
         </div>
 
-        <div className="flex flex-col gap-[20px] text-[#CCCCCC]">
+        <div className="flex flex-col gap-[20px] text-footerText">
           <h4 className="font-bold text-[22px] text-white font-mono capitalize">
             Join our weekly digest
           </h4>
@@ -49,12 +49,12 @@ export default function Footer(): JSX.Element {
           </span>
           <div className="flex flex-col md:flex-row gap-[16px] md:gap-0 justify-between md:bg-white rounded-[20px] md:max-w-[420px]">
             <input
-              className=" text-[#2B2B2B] h-[46px] rounded-[20px] py-[16px] px-[20px] border border-[#858584] md:border-none  md:focus:outline-none "
+              className=" text-bgPrimary h-[46px] rounded-[20px] py-[16px] px-[20px] border border-caption md:border-none  md:focus:outline-none "
               type="text"
               placeholder="Enter your email here"
             />
 
-            <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-[#A259FF] md:w-[211px] ">
+            <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-callToAction md:w-[211px] ">
               <EnvelopIcon />
               <span className="font-semibold text-white">Subscribe</span>
             </button>
@@ -62,8 +62,8 @@ export default function Footer(): JSX.Element {
         </div>
       </div>
 
-      <hr className="w-full border border-[#858584] mt-[30px] " />
-      <p className="pt-[20px] text-[#CCCCCC] text-[12px]">
+      <hr className="w-full border border-caption mt-[30px] " />
+      <p className="pt-[20px] text-footerText text-[12px]">
         Ⓒ NFT Market. Use this template freely.
       </p>
     </div>
