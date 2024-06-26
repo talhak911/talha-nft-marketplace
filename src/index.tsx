@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Layout from "./Layout";
+import Layout from "./Layout/Layout";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { store } from "./store/Store";
+import { store } from "./redux/store";
 import { Provider } from "react-redux";
 import Home from "./pages/Home";
 import Category from "./pages/NftsByCollections";
