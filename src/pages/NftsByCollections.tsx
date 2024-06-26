@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
-
 import { ReactComponent as Search } from "../assets/icons/search.svg";
 import DisplayNFTs from "../components/displayNFTs/DisplayNfts";
-
 import { useNftsByCollections } from "../hooks/useNftsByCollection";
 import Loader from "../components/loader/loader";
+import { useEffect } from "react";
 
 export default function NftsCollections(): JSX.Element {
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  },[])
   const { collectionSlug } = useParams();
   const {nfts,error,loading} = useNftsByCollections({collection_slug:collectionSlug,limit:9})
 
@@ -15,14 +17,6 @@ export default function NftsCollections(): JSX.Element {
      <Loader/>
     );
   }
-// if(error){
-//   return (
-//     <div className="flex items-center justify-center h-screen">
-//     <h5 className="text-4xl">{error}</h5>
-//   </div>
-//   )
-// }
-
   return (
     <>
       <div className="px-[30px] pt-[40px]  md:px-[90px] md:pt-[60px] lg:px-[115px] lg:pt-[80px] pb-[14px]">

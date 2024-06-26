@@ -11,7 +11,7 @@ export default function NftCard({item}:{item:NftType}):React.JSX.Element {
       };
     return (
         <Link
-        to={`/nft/${item.contract}/${item.identifier}`}
+        to={`/nft/${item?.contract}/${item?.identifier}`}
         className="flex flex-col  items-center md:max-w-[330px] justify-center  h-fit"
       >
         {/* nft image */}
@@ -26,7 +26,7 @@ export default function NftCard({item}:{item:NftType}):React.JSX.Element {
           className={`h-[238px] md:h-[295px] w-full min-w-[315px]  md:min-w-[330px]   rounded-t-[20px] ${
             loadedImage ? "" : "hidden"
           }`}
-          src={item.image_url}
+          src={item?.image_url}
           alt=""
           effect="blur"
           onLoad={() => handleImageLoad()}
@@ -34,7 +34,7 @@ export default function NftCard({item}:{item:NftType}):React.JSX.Element {
         <div className=" h-fit w-full min-w-[315px] md:w-[330px] max-w-[315px] md:max-w-[330px] bg-bgPrimary rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]">
               <div className="flex flex-col gap-[25px]">
                 <div className="flex flex-col gap-[5px]">
-                  <h5 className="text-[22px] font-semibold">{item.name}</h5>
+                  <h5 className="text-[22px] font-semibold">{item?.name}</h5>
 
                   <div className="flex gap-[10px]">
                     <span>@</span>

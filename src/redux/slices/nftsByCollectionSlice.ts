@@ -18,7 +18,6 @@ async ({ collection_slug, limit }: fetchNftByCollectionParams, { rejectWithValue
           headers: { "x-api-key": `${process.env.REACT_APP_OPEN_SEA_KEY}` },
         }
       );
-      console.log(response.status)
       return response.data as GetNftsByCollectionResponse;
     } catch (error) {
       return rejectWithValue(`${error}`);
@@ -45,13 +44,12 @@ export const nftsByCollectionSlice = createSlice({
       .addCase(
         fetchNftsByCollection.fulfilled,
         (state, action: PayloadAction<GetNftsByCollectionResponse>) => {
-          console.log(action.payload)
           state.nfts = action.payload;
           state.loading ='succeeded'
         }
       )
       .addCase(fetchNftsByCollection.rejected, (state, action) => {
-        console.log(action.payload)
+       
         if (action.payload) {
           state.error = action.payload as string;
         } else {
