@@ -2,7 +2,7 @@ import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import loading from "../../assets/loading.gif"
 import { Link } from "react-router-dom";
-import { NftType } from "../../types/nfts/commonTypes";
+import { NftType } from "../../types/types";
 export default function NftCard({item}:{item:NftType}):React.JSX.Element {
     
     const [loadedImage, setLoadedImage] = useState< boolean >(false);
@@ -31,7 +31,7 @@ export default function NftCard({item}:{item:NftType}):React.JSX.Element {
           effect="blur"
           onLoad={() => handleImageLoad()}
         />
-        <div className=" h-fit w-full min-w-[315px] md:w-[330px] max-w-[315px] md:max-w-[330px] bg-[#2B2B2B] rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]">
+        <div className=" h-fit w-full min-w-[315px] md:w-[330px] max-w-[315px] md:max-w-[330px] bg-bgPrimary rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]">
               <div className="flex flex-col gap-[25px]">
                 <div className="flex flex-col gap-[5px]">
                   <h5 className="text-[22px] font-semibold">{item.name}</h5>
@@ -43,11 +43,11 @@ export default function NftCard({item}:{item:NftType}):React.JSX.Element {
                 </div>
                 <div className="flex justify-between">
                   <div className="flex flex-col gap-[8px]">
-                    <span className="text-[#858584] text-[12px]">Price</span>
+                    <span className="text-caption text-[12px]">Price</span>
                     <span className="text-[12px] md:text-[16px]">1.64 ETH</span>
                   </div>
                   <div className="flex flex-col gap-[8px] text-right">
-                    <span className="text-[#858584] text-[12px]">
+                    <span className="text-caption text-[12px]">
                       Higest Bid
                     </span>
                     <span className="text-[12px] md:text-[16px]">0.33 ETH</span>

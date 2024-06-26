@@ -1,4 +1,4 @@
-import { CategoryItem } from "../../types/commonTypes";
+import { CategoryItem } from "../../types/types";
 
 export default function CategoryCard({item}:{item:CategoryItem}){
     return (
@@ -22,7 +22,7 @@ export default function CategoryCard({item}:{item:CategoryItem}){
                   <item.icon className="size-[80px] lg:size-[100px]" />
                 </div>
               </div>
-              <div className="h-[67px] w-full md:h-[76px] bg-[#3B3B3B] rounded-b-[20px] ">
+              <div className="h-[67px] w-full md:h-[76px] bg-bgSecondary rounded-b-[20px] ">
                 <p className="w-full font-semibold sm:text-[16px] text-sm lg:text-[22px] py-[20px] px-2 xsm:px-[10px] md:px-[20px]  lg:pb-[30px] ">
                   {item.category}
                 </p>

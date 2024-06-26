@@ -1,8 +1,8 @@
-import openSeaApi from "../api";
-import { AccountInfoResponseType } from "../types/nfts/commonTypes";
+import openSeaApi from "../axiosInstance/api";
+import { AccountInfoResponseType } from "../types/types";
 
 export const getArtistName = async (
-  address_or_username: string
+  address_or_username: string | undefined
 ): Promise<string> => {
   try {
     const response = await openSeaApi.get<AccountInfoResponseType>(
@@ -17,7 +17,6 @@ export const getArtistName = async (
     const artistName = response.data.username || "Unknown artist";
     return artistName;
   } catch (error) {
-    console.error("Error fetching artist name:", error);
     return "failed to get user data";
   }
 };
