@@ -1,29 +1,30 @@
 import Timer1 from "../components/nftHighlight/timer";
 import { useParams } from "react-router-dom";
-import { useAppSelector, useAppDispatch } from "../hooks/hooks";
-import { useEffect } from "react";
-import { fetchNft, clearNfts } from "../store/slices/NftSlice";
-import  ArtistName  from "../components/data/ArtistName";
-import loader from '../assets/loadingRocket.gif'
+
+import { useNft } from "../hooks/useNft";
+import { getNftParamsType } from "../types/types";
+import Loader from "../components/loader/loader";
+import { useArtistName } from "../hooks/useArtistName";
+
 export default function NFTPage(): JSX.Element {
-  const { contract, identifier } = useParams();
-  let nft = useAppSelector((state) => state.NftReducer.nft?.nft) || null;
-  const loading = useAppSelector((state) => state.NftReducer.loading);
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(clearNfts());
-    if (contract && identifier) {
-      dispatch(fetchNft({ contract: contract, identifier: identifier }));
-    }
-  }, [dispatch,contract,identifier]);
+  
+  const { contract, identifier } = useParams<getNftParamsType>();
+  const { nft, loading, error ,artistName } = useNft({contract, identifier});
+
   if (loading === "pending") {
     return (
+     <Loader/>
+    );
+  }
+
+  if (error) {
+    return (
       <div className="flex items-center justify-center h-screen">
-        <img src={loader} alt="" />
+        <h5 className="text-4xl">Error: {error}</h5>
       </div>
     );
   }
+
   if (!nft) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -35,7 +36,7 @@ export default function NFTPage(): JSX.Element {
     <div>
       <img
         className=" w-full h-[320px] md:h-[420px] lg:h-[560px] object-contain "
-        src={nft.display_image_url}
+        src={nft.nft.display_image_url}
         alt=""
       />
 
@@ -49,10 +50,10 @@ export default function NFTPage(): JSX.Element {
           <div className="flex flex-col gap-[20px] md:gap-[30px] w-full max-w-[365px] lg:max-w-[605px]">
             <div className="flex flex-col gap-[10px]">
               <h2 className="text-[28px] md:text-[38px] lg:text-[51px] font-semibold">
-                {nft.name}
+                {nft.nft.name}
               </h2>
-              <span className="text-[#858584] text-[16px] lg:text-[22px] ">
-                Minted on {nft.updated_at.split("T")[0]}
+              <span className="text-caption text-[16px] lg:text-[22px] ">
+                Minted on {nft.nft.updated_at.split("T")[0]}
               </span>
             </div>
             <div className="block md:hidden">
@@ -62,36 +63,37 @@ export default function NFTPage(): JSX.Element {
 
             {/* Created by */}
             <div className="flex flex-col gap-[10px]">
-              <span className="font-mono text-[16px] text-[#858584] md:text-[22px]">
+              <span className="font-mono text-[16px] text-caption md:text-[22px]">
                 Created By
               </span>
 
               <div className="flex items-center gap-[12px]">
                 <span>@</span>
-                <ArtistName creator={nft.creator} />
+                <span className="text-[16px] lg:text-[22px]"> {artistName}</span>
+                
               </div>
             </div>
             {/* Description */}
             <div className="flex flex-col gap-[10px]">
-              <span className=" font-mono text-[16px] text-[#858584] md:text-[22px]">
+              <span className=" font-mono text-[16px] text-caption md:text-[22px]">
                 Description
               </span>
               <div className="flex items-center gap-[12px]">
                 <p className="text-[16px] lg:text-[22px]">
-                  {nft.description || "no description found"}
+                  {nft.nft.description || "no description found"}
                 </p>
               </div>
             </div>
 
             {/* Details */}
             <div className="flex flex-col gap-[10px]">
-              <span className=" font-mono text-[16px] text-[#858584] md:text-[22px]">
+              <span className=" font-mono text-[16px] text-caption md:text-[22px]">
                 Details
               </span>
               <div className="flex items-center gap-[10px]">
                 <span>@</span>
                 <a
-                  href={nft.opensea_url}
+                  href={nft.nft.opensea_url}
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-[16px] lg:text-[22px]"
@@ -107,21 +109,21 @@ export default function NFTPage(): JSX.Element {
 
             {/* Tags */}
             <div className="flex flex-col gap-[10px]">
-              <span className=" font-mono text-[16px] text-[#858584] md:text-[22px]">
+              <span className=" font-mono text-[16px] text-caption md:text-[22px]">
                 Tags
               </span>
 
               <div className="flex flex-col lg:flex-row gap-[20px]">
-                <div className="py-[12px] px-[30px] bg-[#3B3B3B] capitalize w-fit rounded-[20px]">
+                <div className="py-[12px] px-[30px] bg-bgSecondary capitalize w-fit rounded-[20px]">
                   Animation
                 </div>
-                <div className="py-[12px] px-[30px] bg-[#3B3B3B] capitalize w-fit rounded-[20px]">
+                <div className="py-[12px] px-[30px] bg-bgSecondary capitalize w-fit rounded-[20px]">
                   Animation
                 </div>
-                <div className="py-[12px] px-[30px] bg-[#3B3B3B] capitalize w-fit rounded-[20px]">
+                <div className="py-[12px] px-[30px] bg-bgSecondary capitalize w-fit rounded-[20px]">
                   Animation
                 </div>
-                <div className="py-[12px] px-[30px] bg-[#3B3B3B] capitalize w-fit rounded-[20px]">
+                <div className="py-[12px] px-[30px] bg-bgSecondary capitalize w-fit rounded-[20px]">
                   Animation
                 </div>
               </div>

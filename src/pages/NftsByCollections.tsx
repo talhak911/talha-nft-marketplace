@@ -1,25 +1,27 @@
 import { useParams } from "react-router-dom";
-import { useAppSelector, useAppDispatch } from "../hooks/hooks";
-import { useEffect } from "react";
+
 import { ReactComponent as Search } from "../assets/icons/search.svg";
 import DisplayNFTs from "../components/displayNFTs/DisplayNfts";
-import {
-  fetchNftsByCollection,
-  clearNfts,
-} from "../store/slices/NftsByCollectionSllice";
+
+import { useNftsByCollections } from "../hooks/useNftsByCollection";
+import Loader from "../components/loader/loader";
 
 export default function NftsCollections(): JSX.Element {
   const { collectionSlug } = useParams();
-  
-  const dispatch = useAppDispatch();
+  const {nfts,error,loading} = useNftsByCollections({collection_slug:collectionSlug,limit:9})
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(clearNfts());
-    if (collectionSlug) {
-      dispatch(fetchNftsByCollection({collection_slug:collectionSlug,limit:9}));
-    }
-  }, [collectionSlug, dispatch]);
+  if (loading === "pending") {
+    return (
+     <Loader/>
+    );
+  }
+// if(error){
+//   return (
+//     <div className="flex items-center justify-center h-screen">
+//     <h5 className="text-4xl">{error}</h5>
+//   </div>
+//   )
+// }
 
   return (
     <>
@@ -52,15 +54,16 @@ export default function NftsCollections(): JSX.Element {
           <div className="flex items-center justify-center mt-10 ">
             <div className="flex items-center justify-center gap-4">
               <h5>NFTs</h5>
-              <span className="rounded-[20px] bg-[#858584] px-[10px] py-[5px]">
+              <span className="rounded-[20px] bg-caption px-[10px] py-[5px]">
                 302
               </span>
             </div>
           </div>
         </div>
       </div>
-      <DisplayNFTs/>
-      <hr className="border border-[#2B2B2B]" />
+      {error && <span>{error}</span>}
+      <DisplayNFTs nfts={nfts?.nfts}/>
+      <hr className="border border-bgPrimary" />
     </>
   );
 }

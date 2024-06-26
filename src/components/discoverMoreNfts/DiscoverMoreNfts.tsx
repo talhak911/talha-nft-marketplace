@@ -1,23 +1,17 @@
-import { useAppDispatch } from "../../hooks/hooks";
-import React, { useEffect } from "react";
+
+import React from "react";
 import { ReactComponent as EyeIcon } from "../../assets/icons/eye.svg";
 import DisplayNFTs from "../../components/displayNFTs/DisplayNfts";
-import {
-  fetchNftsByCollection,
-  clearNfts,
-} from "../../store/slices/NftsByCollectionSllice";
+
 import { Link } from "react-router-dom";
+import { useNftsByCollections } from "../../hooks/useNftsByCollection";
+import Loader from "../loader/loader";
 
 
 export default function DiscoverMoreNfts(): React.JSX.Element {
-  const dispatch = useAppDispatch();
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    dispatch(clearNfts());
-   
-      dispatch(fetchNftsByCollection({collection_slug:"overworld-incarna",limit:6}));
-    
-  }, [dispatch]);
+
+  const {nfts,error,loading} = useNftsByCollections({collection_slug:"overworld-incarna",limit:6})
+
 
   return (
     <div className="px-[30px] py-[40px] md:px-[72px] lg:px-[115px] lg:py-[80px]">
@@ -28,10 +22,9 @@ export default function DiscoverMoreNfts(): React.JSX.Element {
           </h3>
           <div className="flex justify-between items-center">
             <p className="text-[16px] lg:text-[22px] ">
-              {" "}
               Explore new trending NFTs
             </p>
-            <button className=" hidden border-2 border-[#A259FF] w-[187px] h-[60px] rounded-[20px] md:flex items-center justify-center">
+            <button className=" hidden border-2 border-callToAction w-[187px] h-[60px] rounded-[20px] md:flex items-center justify-center">
               <Link to={`/overworld-incarna`} className="flex items-center justify-center gap-[12px]">
                 <EyeIcon />
                 <span>See All</span>
@@ -40,10 +33,13 @@ export default function DiscoverMoreNfts(): React.JSX.Element {
           </div>
         </div>
         <div className="mx-[-30px] md:mx-[-72px] lg:mx-[-115px]">
-      <DisplayNFTs  />
+          {error && <span>{error}</span>}
+          {loading === 'pending' && <Loader/>}
+          <DisplayNFTs nfts={nfts?.nfts} />
+
     </div>
 
-        <button className=" md:hidden border-2 border-[#A259FF] w-full h-[60px] rounded-[20px] flex items-center justify-center">
+        <button className=" md:hidden border-2 border-callToAction w-full h-[60px] rounded-[20px] flex items-center justify-center">
           <Link to={`/overworld-incarna`} className="flex items-center justify-center gap-[12px]">
             <EyeIcon />
             <span>See All</span>
