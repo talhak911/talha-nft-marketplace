@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { getArtistName } from "../../data/data";
+import { ArtistNameProps } from "../../types/types";
 
-interface ArtistNameProps {
-  creator: string;
-  
-}
+
 
 export default function ArtistName ({ creator }:ArtistNameProps):React.JSX.Element{
   const [artistName, setArtistName] = useState<string>("");

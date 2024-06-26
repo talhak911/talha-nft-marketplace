@@ -1,5 +1,18 @@
+
+export type CategoryItem = {
+  category: string;
+  imgUrl: string;
+  link: string;
+  icon: React.FunctionComponent<
+    React.SVGProps<SVGSVGElement> & { title?: string }
+  >;
+};
+export type ArtistNameProps = {
+  creator: string;
+  
+}
 // for collections
-export interface CollectionType {
+export type CollectionType = {
   collection: string;
   name: string;
   description: string;
@@ -27,18 +40,18 @@ export interface CollectionType {
   ];
 }
 
-export interface GetCollectionsResponse {
+export type GetCollectionsResponse = {
   collections: CollectionType[];
   next: string;
 }
 
 // for nfts within collection
-export interface fetchNftByCollectionParams {
-  collection_slug: string;
+export type fetchNftByCollectionParams = {
+  collection_slug: string | undefined
   limit?: number
 }
 
-export interface NftType {
+export type NftType = {
   identifier: string;
   collection: string;
   contract: string;
@@ -55,29 +68,29 @@ export interface NftType {
   is_nsfw: boolean;
 }
 
-export interface GetNftsByCollectionResponse {
+export type GetNftsByCollectionResponse = {
   nfts: NftType[];
   next: string;
 }
 
 // nft
-interface Trait {
+type Trait = {
   trait_type: string;
   display_type: string;
   max_value: string;
   value: number;
 }
 
-interface Owner {
+type Owner = {
   address: string;
   quantity: number;
 }
 
-interface RankingFeatures {
+type RankingFeatures = {
   unique_attribute_count: number;
 }
 
-interface Rarity {
+type Rarity = {
   strategy_version: string;
   rank: number;
   score: number;
@@ -87,7 +100,7 @@ interface Rarity {
   ranking_features: RankingFeatures;
 }
 
-interface SingleNftType {
+type SingleNftType = {
   identifier: string;
   collection: string;
   contract: string;
@@ -110,17 +123,17 @@ interface SingleNftType {
   rarity: Rarity;
 }
 
-export interface getNftParamsType {
-  identifier: string;
-  contract: string;
+export type getNftParamsType = {
+  identifier: string | undefined;
+  contract: string | undefined;
 }
 
-export interface GetNftResponse {
+export type GetNftResponse = {
   nft: SingleNftType;
 }
 
 // for owner info
-export interface AccountInfoResponseType {
+export type AccountInfoResponseType = {
   address: string;
   username: string;
   profile_image_url: string;
@@ -132,4 +145,24 @@ export interface AccountInfoResponseType {
   }[];
   bio: string;
   joined_date: string;
+}
+
+
+export type CollectionsState = {
+    collections: GetCollectionsResponse |null
+    loading: 'idle' | 'pending' | 'succeeded' | 'failed'
+    error:string | null
+  }
+
+export type NftsByCollectionState = {
+  nfts: GetNftsByCollectionResponse | null
+  loading: 'idle' | 'pending' | 'succeeded' | 'failed'
+  error:string | null
+}
+
+export type NftState = {
+  nft:GetNftResponse | null
+  loading: 'idle' | 'pending' | 'succeeded' | 'failed'
+  error:string | null
+  artistName :string | null
 }
