@@ -17,12 +17,12 @@ export default function HowItWorks(): JSX.Element {
         {/* Cards */}
         <div className="flex flex-col md:flex-row gap-[20px] md:gap-[30px]">
           {/* Single card */}
-         {infoCardsData.map((item,index)=>
+         {infoCardsData?.map((item,index)=>
          <InfoCard
          key={index}
-         image={item.image}
-         title={item.title}
-         description={item.description}
+         image={item?.image}
+         title={item?.title}
+         description={item?.description}
        />
         )}
           

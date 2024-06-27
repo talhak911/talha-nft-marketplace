@@ -85,10 +85,10 @@ const Timer1: React.FC<{ isPlaceBid: boolean }> = ({
             <div className="flex flex-col gap-[5px]">
               <div className="flex">
                 <span className="  text-[38px] font-bold  leading-[45.6px]">
-                  {countDownTime.hours.charAt(0)}
+                  {countDownTime?.hours?.charAt(0)}
                 </span>
                 <span className=" text-[38px] font-bold   leading-[45.6px]">
-                  {countDownTime.hours.charAt(1)}
+                  {countDownTime?.hours?.charAt(1)}
                 </span>
               </div>
               <p className=" text-[12px]">Hours</p>
@@ -99,10 +99,10 @@ const Timer1: React.FC<{ isPlaceBid: boolean }> = ({
             <div className="flex flex-col gap-[5px]">
               <div className="flex">
                 <span className=" text-[38px] font-bold  leading-[45.6px]">
-                  {countDownTime.minutes.charAt(0)}
+                  {countDownTime?.minutes?.charAt(0)}
                 </span>
                 <span className=" text-[38px] font-bold   leading-[45.6px]">
-                  {countDownTime.minutes.charAt(1)}
+                  {countDownTime?.minutes?.charAt(1)}
                 </span>
               </div>
               <p className=" text-[12px]">Minutes</p>
@@ -113,10 +113,10 @@ const Timer1: React.FC<{ isPlaceBid: boolean }> = ({
             <div className="flex flex-col gap-[5px]">
               <div className="flex">
                 <span className=" text-[38px] font-bold  leading-[45.6px]">
-                  {countDownTime.seconds.charAt(0)}
+                  {countDownTime?.seconds?.charAt(0)}
                 </span>
                 <span className=" text-[38px] font-bold   leading-[45.6px]">
-                  {countDownTime.seconds.charAt(1)}
+                  {countDownTime?.seconds?.charAt(1)}
                 </span>
               </div>
               <p className=" text-[12px]">Seconds</p>
@@ -124,7 +124,6 @@ const Timer1: React.FC<{ isPlaceBid: boolean }> = ({
           </div>
           {isPlaceBid && (
             <button className="mt-[20px] font-semibold w-full h-[60px] flex items-center justify-center bg-callToAction rounded-[20px]">
-              {" "}
               Place Bid
             </button>
           )}

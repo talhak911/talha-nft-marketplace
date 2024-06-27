@@ -36,7 +36,7 @@ export default function NFTPage(): JSX.Element {
     <div>
       <img
         className=" w-full h-[320px] md:h-[420px] lg:h-[560px] object-contain "
-        src={nft?.nft.display_image_url}
+        src={nft?.nft?.display_image_url}
         alt=""
       />
 
@@ -50,10 +50,10 @@ export default function NFTPage(): JSX.Element {
           <div className="flex flex-col gap-[20px] md:gap-[30px] w-full max-w-[365px] lg:max-w-[605px]">
             <div className="flex flex-col gap-[10px]">
               <h2 className="text-[28px] md:text-[38px] lg:text-[51px] font-semibold">
-                {nft?.nft.name}
+                {nft?.nft?.name}
               </h2>
               <span className="text-caption text-[16px] lg:text-[22px] ">
-                Minted on {nft?.nft.updated_at.split("T")[0]}
+                Minted on {nft?.nft?.updated_at?.split("T")[0]}
               </span>
             </div>
             <div className="block md:hidden">
