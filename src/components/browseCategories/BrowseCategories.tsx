@@ -16,7 +16,7 @@ export default function BrowseCategories(): JSX.Element {
 
         {/* categories list */}
         <div className="grid gap-[20px] md:gap-[30px] justify-center grid-cols-2 md:grid-cols-4 mx-auto">
-          {categoryItems.map((item, index) => (
+          {categoryItems?.map((item, index) => (
             <CategoryCard item={item} key={index}/>
           ))}
         </div>
