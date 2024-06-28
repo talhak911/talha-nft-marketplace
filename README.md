@@ -1,3 +1,4 @@
+# This project is made using React Redux toolkit, axios , and OpenSea Api
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
