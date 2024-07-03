@@ -1,0 +1,36 @@
+import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
+import { ReactComponent as User } from "../../assets/icons/user.svg";
+import { ReactComponent as Menu } from "../../assets/icons/burgerMenu.svg";
+import { Link } from "react-router-dom";
+function Navbar(): JSX.Element {
+  return (
+    <nav className="flex justify-between items-center  text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[20px]">
+      <Link to="/" className="flex items-center">
+        <Logo className="h-[20px] lg:h-[30px] size-[32px] w-8 mr-2" />
+        <h2 className="text-[14.85px] lg:text-[19.8px] font-bold">
+          NFT Marketplace
+        </h2>
+      </Link>
+
+      <div className="hidden lg:block">
+        <ul className=" flex space-x-[36px] ml-auto items-center font-medium">
+          <li className="hover:text-caption cursor-pointer">Marketplace</li>
+          <li className="hover:text-caption cursor-pointer">Rankings</li>
+          <li className="hover:text-caption cursor-pointer">
+            Connect a wallet
+          </li>
+          <button className="bg-callToAction rounded-2xl py-3 px-7 flex items-center gap-2">
+            {" "}
+            <User />
+            Sign Up
+          </button>
+        </ul>
+      </div>
+      <div className="lg:hidden">
+        <Menu />
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
