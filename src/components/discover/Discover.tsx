@@ -19,7 +19,7 @@ export default function Discover(): React.JSX.Element {
             <p className="text-[16px] lg:text-[22px] ">
               Explore new trending NFTs
             </p>
-            <button className=" hidden border-2 border-callToAction w-[187px] h-[60px] rounded-[20px] md:flex items-center justify-center">
+            <button className=" hidden border-2 border-purple w-[187px] h-[60px] rounded-[20px] md:flex items-center justify-center">
               <Link to={`/overworld-incarna`} className="flex items-center justify-center gap-[12px]">
                 <EyeIcon />
                 <span>See All</span>
@@ -34,7 +34,7 @@ export default function Discover(): React.JSX.Element {
 
     </div>
 
-        <button className=" md:hidden border-2 border-callToAction w-full h-[60px] rounded-[20px] flex items-center justify-center">
+        <button className=" md:hidden border-2 border-purple w-full h-[60px] rounded-[20px] flex items-center justify-center">
           <Link to={`/overworld-incarna`} className="flex items-center justify-center gap-[12px]">
             <EyeIcon />
             <span>See All</span>

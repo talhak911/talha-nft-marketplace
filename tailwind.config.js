@@ -20,8 +20,8 @@ module.exports = {
         lg2:'1220px'
       },
       backgroundImage: {
-        'nft-mobile': "url('/src/assets/nftHighlightImageMobile.png')",
-        'nft-desktop': "url('/src/assets/nftHighlightImage.png')",
+        'nft-mobile': "url('/src/assets/images/nftHighlightImageMobile.png')",
+        'nft-desktop': "url('/src/assets/images/nftHighlightImage.png')",
       },
     },
   },

@@ -4,7 +4,7 @@ import Timer from "../timer/Timer";
 export default function NftHighlight(): JSX.Element {
   return (
     <div className="relative h-[590px] md:h-[630px] lg:h-[640px] bg-cover bg-center bg-no-repeat bg-nft-mobile md:bg-nft-desktop">
-      <div className="absolute inset-0 bg-gradient-to-t from-callToAction to-transparent">
+      <div className="absolute inset-0 bg-gradient-to-t from-purple to-transparent">
         <div className="py-[120px] px-[30px] md:py-[360px] md:px-[90px]  lg:px-[115px]">
           <div className="flex flex-col md:flex-row md:justify-between">
             <div className="flex flex-col gap-[30px]  ">

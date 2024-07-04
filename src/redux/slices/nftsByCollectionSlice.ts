@@ -1,15 +1,24 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { GetNftsByCollectionResponse, fetchNftByCollectionParams,NftsByCollectionState } from "../../types/types";
-import openSeaApi from "../../axiosInstance/api";
-
-export const fetchNftsByCollection = createAsyncThunk<
+import {
   GetNftsByCollectionResponse,
-  fetchNftByCollectionParams,
-  { rejectValue: string }
->(
-  "NftsByCollection/fetchNftsByCollection",
-async ({ collection_slug, limit }: fetchNftByCollectionParams, { rejectWithValue }) => {
+  FetchNftByCollectionParams,
+  NftsByCollectionState,
+} from "../../types/types";
+import openSeaApi from "../../axiosInstance/axiosInstance";
+
+const initialState: NftsByCollectionState = {
+  nfts: null,
+  loading: "idle",
+  error: null,
+};
+
+export const fetchNftsByCollection = createAsyncThunk(
+  "nftsByCollection/fetchNftsByCollection",
+  async (
+    { collection_slug, limit }: FetchNftByCollectionParams,
+    { rejectWithValue }
+  ) => {
     try {
       const response = await openSeaApi.get<GetNftsByCollectionResponse>(
         `/collection/${collection_slug}/nfts?limit=${limit}`,
@@ -25,12 +34,6 @@ async ({ collection_slug, limit }: fetchNftByCollectionParams, { rejectWithValue
   }
 );
 
-const initialState: NftsByCollectionState = {
-  nfts: null,
-  loading: "idle",
-  error: null,
-};
-
 export const nftsByCollectionSlice = createSlice({
   name: "nftsByCollection",
   initialState,
@@ -45,22 +48,20 @@ export const nftsByCollectionSlice = createSlice({
         fetchNftsByCollection.fulfilled,
         (state, action: PayloadAction<GetNftsByCollectionResponse>) => {
           state.nfts = action.payload;
-          state.loading ='succeeded'
+          state.loading = "succeeded";
         }
       )
       .addCase(fetchNftsByCollection.rejected, (state, action) => {
-       
         if (action.payload) {
           state.error = action.payload as string;
         } else {
           state.error = action.error.message as string;
         }
-          state.loading = 'failed'
-        }
-      )
-      .addCase(fetchNftsByCollection.pending,(state,action)=>{
-        state.loading = 'pending'
+        state.loading = "failed";
       })
+      .addCase(fetchNftsByCollection.pending, (state) => {
+        state.loading = "pending";
+      });
   },
 });
 export const { clearNfts } = nftsByCollectionSlice.actions;

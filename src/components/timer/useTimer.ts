@@ -1,10 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-
-interface CountDownTime {
-  hours: string;
-  minutes: string;
-  seconds: string;
-}
+import { CountDownTime } from "../../types/types";
 
 const useCountDown = () => {
   const [countDownTime, setCountDownTime] = useState<CountDownTime>({
@@ -63,7 +58,7 @@ const useCountDown = () => {
     const intervalId = setInterval(() => {
       getTimeDifference(countDownDate.getTime());
     }, 1000);
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    return () => clearInterval(intervalId); 
   }, []);
 
   useEffect(() => {

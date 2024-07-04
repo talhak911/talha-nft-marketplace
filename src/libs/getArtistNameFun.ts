@@ -1,4 +1,4 @@
-import openSeaApi from "../axiosInstance/api";
+import openSeaApi from "../axiosInstance/axiosInstance";
 import { AccountInfoResponseType } from "../types/types";
 
 export const getArtistName = async (

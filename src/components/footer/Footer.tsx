@@ -54,7 +54,7 @@ export default function Footer(): JSX.Element {
               placeholder="Enter your email here"
             />
 
-            <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-callToAction md:w-[211px] ">
+            <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-purple md:w-[211px] ">
               <EnvelopIcon />
               <span className="font-semibold text-white">Subscribe</span>
             </button>

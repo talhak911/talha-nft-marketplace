@@ -19,7 +19,7 @@ function Navbar(): JSX.Element {
           <li className="hover:text-caption cursor-pointer">
             Connect a wallet
           </li>
-          <button className="bg-callToAction rounded-2xl py-3 px-7 flex items-center gap-2">
+          <button className="bg-purple rounded-2xl py-3 px-7 flex items-center gap-2">
             {" "}
             <User />
             Sign Up

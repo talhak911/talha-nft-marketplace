@@ -1,5 +1,5 @@
 import CategoryCard from "../categoryCard/CategoryCard";
-import { categoryItems } from "../../constants/categoryData";
+import { categoryItems } from "../../constants/categoryItems";
 
 export default function Categories(): JSX.Element {
 

@@ -17,32 +17,32 @@ export default function Hero(): JSX.Element {
             <HeroContant />
           </div>
 
-          <button className="flex w-full max-w-[315px] mx-auto md:mx-0 justify-center items-center text-white font-semibold px-12 gap-3 md:max-w-[224px] h-[60px] bg-callToAction rounded-2xl">
+          <button className="flex w-full max-w-[315px] mx-auto md:mx-0 justify-center items-center text-white font-semibold px-12 gap-3 md:max-w-[224px] h-[60px] bg-purple rounded-2xl">
             <Rocket /> Get Started
           </button>
           <div className="mx-auto md:mx-[0px]">
-            <div className="flex gap-[30px] font-mono">
+            <div className="flex gap-[30px] font-mono  capitalize ">
               <div className="flex flex-col rounded-[20px] ">
-                <span className="font-bold text-[22px]  lg:text-[28px] capitalize ">
+                <span className="font-bold text-[22px]  lg:text-[28px]">
                   240k+
                 </span>
-                <span className="font-sans text-[16px]  lg:text-[24px]  capitalize ">
+                <span className="font-sans text-[16px]  lg:text-[24px]   ">
                   Total Sale
                 </span>
               </div>
               <div className="flex flex-col rounded-[20px] ">
-                <span className="font-bold text-[22px]  lg:text-[28px] capitalize ">
+                <span className="font-bold text-[22px]  lg:text-[28px]  ">
                   100k+
                 </span>
-                <span className=" font-sans text-[16px]  lg:text-[24px]  capitalize ">
+                <span className=" font-sans text-[16px]  lg:text-[24px] ">
                   Auctions
                 </span>
               </div>
               <div className="flex flex-col rounded-[20px]">
-                <span className="font-bold text-[22px]  lg:text-[28px] capitalize ">
+                <span className="font-bold text-[22px]  lg:text-[28px]  ">
                   240k+
                 </span>
-                <span className="font-sans text-[16px]  lg:text-[24px] capitalize ">
+                <span className="font-sans text-[16px]  lg:text-[24px] ">
                   Artists
                 </span>
               </div>

@@ -23,7 +23,7 @@ export default function Collections(): JSX.Element {
             </p>
           </div>
           {/* search bar */}
-          <div className="relative h-[60px] border  border-[#3B3B3B] rounded-[20px] w-full px-[20px]">
+          <div className="relative h-[60px] border  border-bgSecondary rounded-[20px] w-full px-[20px]">
             <input
               type="search"
               id="search-dropdown"

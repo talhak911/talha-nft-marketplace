@@ -1,4 +1,4 @@
-import astronautImage from "../../assets/astronautImage.png";
+import astronautImage from "../../assets/images/astronautImage.png";
 import { ReactComponent as EnvelopIcon } from "../../assets/icons/envelope.svg";
 
 export default function SubscribeSection(): JSX.Element {
@@ -12,7 +12,6 @@ export default function SubscribeSection(): JSX.Element {
               src={astronautImage}
               alt=""
             />
-
             <div className="flex flex-col gap-[30px] ">
               <div className="flex flex-col gap-[10px]">
                 <h4 className=" font-semibold text-[28px] lg:text-[38px] capitalize">
@@ -26,10 +25,9 @@ export default function SubscribeSection(): JSX.Element {
                 <input
                   className="text-bgPrimary  placeholder-opacity-100 h-[46px] rounded-[20px] py-[16px] px-[20px] border border-caption lg:border-none  lg:focus:outline-none "
                   type="text"
-                  placeholder ="Enter your email here"
+                  placeholder="Enter your email here"
                 />
-
-                <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-callToAction lg:w-[211px] ">
+                <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px] te bg-purple lg:w-[211px] ">
                   <EnvelopIcon />
                   <span>Subscribe</span>
                 </button>

@@ -1,6 +1,6 @@
-import wallet from "../assets/howItWorksSectionData/wallet.png";
-import collection from "../assets/howItWorksSectionData/collection.png";
-import earning from "../assets/howItWorksSectionData/earning.png";
+import wallet from "../assets/images/wallet.png";
+import collection from "../assets/images/collection.png";
+import earning from "../assets/images/earning.png";
 
 export const infoCardsData = [
     {

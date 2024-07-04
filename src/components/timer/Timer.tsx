@@ -55,7 +55,7 @@ const Timer: React.FC<{ isPlaceBid: boolean }> = ({
             </div>
           </div>
           {isPlaceBid && (
-            <button className="mt-[20px] font-semibold w-full h-[60px] flex items-center justify-center bg-callToAction rounded-[20px]">
+            <button className="mt-[20px] font-semibold w-full h-[60px] flex items-center justify-center bg-purple rounded-[20px]">
               Place Bid
             </button>
           )}

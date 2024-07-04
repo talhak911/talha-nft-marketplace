@@ -1,5 +1,5 @@
 import { useEffect} from 'react';
-import { fetchCollections } from '../../redux/slices/CollectionsSlice';
+import { fetchCollections } from '../../redux/slices/collectionsSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 
 export const useTopCollections = () => {

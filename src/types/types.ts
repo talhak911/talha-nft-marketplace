@@ -10,6 +10,13 @@ export type ArtistNameProps = {
   creator: string;
 };
 
+export type CountDownTime= {
+  hours: string;
+  minutes: string;
+  seconds: string;
+}
+
+
 export type CollectionType = {
   collection: string;
   name: string;
@@ -48,7 +55,7 @@ export type InfoCardProps ={
   description: string;
 }
 
-export type fetchNftByCollectionParams = {
+export type FetchNftByCollectionParams = {
   collection_slug?: string | undefined;
   limit?: number;
 };
