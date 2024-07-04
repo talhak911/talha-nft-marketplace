@@ -3,7 +3,7 @@ import loading from "../../assets/images/loading.gif";
 import { Link } from "react-router-dom";
 import { NftType } from "../../types/types";
 import { useNftCard } from "./useNftCard";
-
+import imageNotFound from "../../assets/images/imageNotFound.jpg"
 export default function NftCard({
   item,
 }: {
@@ -24,7 +24,7 @@ export default function NftCard({
         className={`h-[238px] md:h-[295px] w-full min-w-[315px]  md:min-w-[330px]   rounded-t-[20px] ${
           loadedImage ? "" : "hidden"
         }`}
-        src={item?.image_url}
+        src={item?.image_url || imageNotFound}
         alt=""
         effect="blur"
         onLoad={() => handleImageLoad()}

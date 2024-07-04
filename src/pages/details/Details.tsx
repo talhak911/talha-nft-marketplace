@@ -1,6 +1,7 @@
 import Timer from "../../components/timer/Timer";
 import { useDetails } from "./useDetails";
 import Loader from "../../components/loader/Loader";
+import imageNotFound from "../../assets/images/imageNotFound.jpg"
 
 export default function Details(): JSX.Element {
 
@@ -30,7 +31,7 @@ export default function Details(): JSX.Element {
     <div>
       <img
         className=" w-full h-[320px] md:h-[420px] lg:h-[560px] object-contain "
-        src={nft?.nft?.display_image_url}
+        src={nft?.nft?.display_image_url || imageNotFound}
         alt=""
       />
 

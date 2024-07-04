@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { CollectionType } from "../../types/types";
 import { useTopCollections } from "./useTopCollections";
 import Loader from "../loader/Loader";
+import imageNotFound from "../../assets/images/imageNotFound.jpg"
 
 export default function TopCollections() {
   const { collections, error, loading } = useTopCollections();
@@ -26,7 +27,7 @@ export default function TopCollections() {
         >
           <img
             alt=""
-            src={item?.image_url}
+            src={item?.image_url || imageNotFound}
             className=" w-full  size-[315px] md:size-[330px] rounded-[20px]"
           />
 

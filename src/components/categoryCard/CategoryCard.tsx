@@ -1,5 +1,5 @@
 import { CategoryItem } from "../../types/types";
-
+import imageNotFound from "../../assets/images/imageNotFound.jpg"
 export default function CategoryCard({ item }: { item: CategoryItem }) {
   return (
     <div className="w-full max-w-[147.5px] h-[209px] md:max-w-[150px] lg:max-w-[240px]  lg:h-[316px] rounded-t-[20px]">
@@ -11,7 +11,7 @@ export default function CategoryCard({ item }: { item: CategoryItem }) {
           <div className="absolute inset-0 backdrop-blur-sm rounded-t-[20px]"></div>
         </div>
         <img
-          src={item?.imgUrl}
+          src={item?.imgUrl || imageNotFound}
           alt={item?.category}
           className="relative z-0 h-full w-full object-cover rounded-t-[20px]"
         />

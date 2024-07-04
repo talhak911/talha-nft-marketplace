@@ -1,5 +1,6 @@
 import { useAppSelector } from "../../hooks/hooks";
 import { Link } from "react-router-dom";
+import imageNotFound from "../../assets/images/imageNotFound.jpg"
 
 export default function HeroContant(): JSX.Element {
   const collections = useAppSelector(
@@ -14,7 +15,7 @@ export default function HeroContant(): JSX.Element {
       >
         <img
           className="max-h-[206px] md:max-h-[221px] lg:max-h-[401px] w-full h-full rounded-t-2xl object-cover"
-          src={collections[0]?.image_url}
+          src={collections[0]?.image_url || imageNotFound}
           alt=""
         />
 

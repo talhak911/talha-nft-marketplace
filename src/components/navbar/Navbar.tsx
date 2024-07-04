@@ -1,10 +1,14 @@
 import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
 import { ReactComponent as User } from "../../assets/icons/user.svg";
 import { ReactComponent as Menu } from "../../assets/icons/burgerMenu.svg";
+import Close from "../../assets/images/closeMenu.png";
 import { Link } from "react-router-dom";
+import { useNavbar } from "./useNavbar";
+
 function Navbar(): JSX.Element {
+  const { isMenuOpen, toggleMenu } = useNavbar();
   return (
-    <nav className="flex justify-between items-center  text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[20px]">
+    <nav className="flex justify-between items-center text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[20px]">
       <Link to="/" className="flex items-center">
         <Logo className="h-[20px] lg:h-[30px] size-[32px] w-8 mr-2" />
         <h2 className="text-[14.85px] lg:text-[19.8px] font-bold">
@@ -13,22 +17,42 @@ function Navbar(): JSX.Element {
       </Link>
 
       <div className="hidden lg:block">
-        <ul className=" flex space-x-[36px] ml-auto items-center font-medium">
+        <ul className="flex space-x-[36px] ml-auto items-center font-medium">
           <li className="hover:text-caption cursor-pointer">Marketplace</li>
           <li className="hover:text-caption cursor-pointer">Rankings</li>
           <li className="hover:text-caption cursor-pointer">
             Connect a wallet
           </li>
           <button className="bg-purple rounded-2xl py-3 px-7 flex items-center gap-2">
-            {" "}
-            <User />
-            Sign Up
+            <User /> Sign Up
           </button>
         </ul>
       </div>
       <div className="lg:hidden">
-        <Menu />
+        <button onClick={toggleMenu} className="focus:outline-none">
+          {!isMenuOpen && <Menu />}
+        </button>
       </div>
+      {isMenuOpen && (
+        <div className="absolute top-0 left-0 w-screen h-screen bg-black bg-opacity-75 z-10 flex flex-col items-center justify-center">
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-10 focus:outline-none"
+          >
+            <img className="size-5 " src={Close} alt="close" />
+          </button>
+          <ul className="space-y-8 text-white text-center">
+            <li className="hover:text-caption cursor-pointer"> Marketplace</li>
+            <li className="hover:text-caption cursor-pointer"> Rankings</li>
+            <li className="hover:text-caption cursor-pointer">
+              Connect a wallet
+            </li>
+            <button className="bg-purple rounded-2xl py-3 px-7 flex items-center gap-2">
+              <User /> Sign Up
+            </button>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

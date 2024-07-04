@@ -1,6 +1,6 @@
 import astronautImage from "../../assets/images/astronautImage.png";
 import { ReactComponent as EnvelopIcon } from "../../assets/icons/envelope.svg";
-
+import imageNotFound from "../../assets/images/imageNotFound.jpg"
 export default function SubscribeSection(): JSX.Element {
   return (
     <div className="px-[30px] py-[40px] md:px-[72px] md:py-[80px] lg:px-[115px] lg:py-[40px]">
@@ -9,7 +9,7 @@ export default function SubscribeSection(): JSX.Element {
           <div className="flex flex-col md:flex-row justify-center items-center gap-[10px] md:gap-[30px] lg:gap-[80px]">
             <img
               className="h-[255px] object-cover max-w-[315px] w-full md:h-[280px] md:w-[300px] lg:w-[425px]  lg:h-[310px] rounded-[20px]"
-              src={astronautImage}
+              src={astronautImage || imageNotFound}
               alt=""
             />
             <div className="flex flex-col gap-[30px] ">
