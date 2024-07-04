@@ -1,6 +1,6 @@
 import DisplayCollections from "../topCollections/TopCollections";
 export default function TrendingCollection(): JSX.Element {
- 
+  
   return (
     <div className="px-[30px] py-[40px] md:px-[72px] md:py-[80px] lg:px-[115px] lg:py-[40px] ">
       <div className=" max-w-[1050px]  mx-auto flex flex-col gap-[40px] lg:gap-[60px] ">
@@ -12,8 +12,7 @@ export default function TrendingCollection(): JSX.Element {
             Checkout our weekly updated trending collection.
           </p>
         </div>
-        {/* cards */}
-          <DisplayCollections/>
+        <DisplayCollections />
       </div>
     </div>
   );

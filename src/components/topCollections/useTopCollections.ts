@@ -1,18 +1,19 @@
-import { useEffect} from 'react';
-import { fetchCollections } from '../../redux/slices/collectionsSlice';
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { useEffect } from "react";
+import { fetchCollections } from "../../redux/slices/collectionsSlice";
+import { useAppDispatch, useAppSelector } from "../../hooks/useStore";
 
 export const useTopCollections = () => {
-  
   const dispatch = useAppDispatch();
   const collectionState = useAppSelector((state) => state.collections);
 
   useEffect(() => {
-    if(collectionState.loading !== 'succeeded'){
-      dispatch(fetchCollections());
-    }
-   
-  }, [dispatch,collectionState.loading]);
+    const fetchData = async () => {
+      if (collectionState.loading !== "succeeded") {
+        await dispatch(fetchCollections());
+      }
+    };
+    fetchData();
+  }, [dispatch, collectionState.loading]);
 
   return collectionState;
 };

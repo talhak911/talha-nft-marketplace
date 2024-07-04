@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../hooks/hooks";
+import { useAppSelector } from "../../hooks/useStore";
 import { Link } from "react-router-dom";
 import imageNotFound from "../../assets/images/imageNotFound.jpg"
 
