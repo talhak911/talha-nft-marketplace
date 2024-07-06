@@ -2,7 +2,7 @@ import wallet from "../assets/images/wallet.png";
 import collection from "../assets/images/collection.png";
 import earning from "../assets/images/earning.png";
 
-export const infoCardsData = [
+export const InfoCardsData = [
     {
       image: wallet,
       title: "Setup Your Wallet",

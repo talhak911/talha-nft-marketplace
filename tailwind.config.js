@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import {colors} from './src/constants/color'
+import {Colors} from './src/constants/color'
 // tailwind.config.js
 module.exports = {
   content: [
@@ -13,7 +13,7 @@ module.exports = {
       },
 
         colors: {
-          ...colors,
+          ...Colors,
         },
       screens: {
         xsm: '375px', 

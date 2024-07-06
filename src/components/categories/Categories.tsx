@@ -1,5 +1,5 @@
 import CategoryCard from "../categoryCard/CategoryCard";
-import { categoryItems } from "../../constants/categoryItems";
+import { CategoryItems } from "../../constants/categoryItems";
 
 export default function Categories(): JSX.Element {
 
@@ -12,7 +12,7 @@ export default function Categories(): JSX.Element {
           </h3>
         </div>
         <div className="grid gap-[20px] md:gap-[30px] justify-center grid-cols-2 md:grid-cols-4 mx-auto">
-          {categoryItems?.map((item, index) => (
+          {CategoryItems?.map((item, index) => (
             <CategoryCard item={item} key={index}/>
           ))}
         </div>

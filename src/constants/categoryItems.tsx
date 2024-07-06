@@ -16,7 +16,7 @@ import { ReactComponent as VideoIcon } from "../assets/categoriesData/icons/vide
 import { ReactComponent as MusicIcon } from "../assets/categoriesData/icons/music.svg";
 import { CategoryItem } from "../types/types";
 
-export const categoryItems: CategoryItem[] = [
+export const CategoryItems: CategoryItem[] = [
     {
       category: "Art",
       imgUrl: artImg,
