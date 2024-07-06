@@ -1,5 +1,5 @@
 import { ReactComponent as Rocket } from "../../assets/icons/rocket.svg";
-import HeroContant from "../heroContant/HeroCotant";
+import HeroContant from "../heroContant/HeroContant";
 
 export default function Hero(): JSX.Element {
   return (
