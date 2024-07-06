@@ -8,10 +8,10 @@ import { useNavbar } from "./useNavbar";
 function Navbar(): JSX.Element {
   const { isMenuOpen, toggleMenu } = useNavbar();
   return (
-    <nav className="flex justify-between items-center text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[20px]">
+    <nav className="flex justify-between items-center text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[34px]">
       <Link to="/" className="flex items-center">
         <Logo className="h-[20px] lg:h-[30px] size-[32px] w-8 mr-2" />
-        <h2 className="text-[14.85px] lg:text-[19.8px] font-bold">
+        <h2 className="text-[14.85px] lg:text-[19.8px] font-bold font-mono">
           NFT Marketplace
         </h2>
       </Link>
@@ -23,7 +23,7 @@ function Navbar(): JSX.Element {
           <li className="hover:text-caption cursor-pointer">
             Connect a wallet
           </li>
-          <button className="bg-purple rounded-2xl py-3 px-7 flex items-center gap-2">
+          <button className="bg-purple rounded-2xl py-[19px] px-[30px] flex items-center gap-2">
             <User /> Sign Up
           </button>
         </ul>
