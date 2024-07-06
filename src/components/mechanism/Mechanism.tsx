@@ -1,6 +1,5 @@
 import InfoCard from "../infoCard/InfoCard";
-import { InfoCardsData } from "../../constants/InfoCardsData";
-
+import { InfoCardsData } from "../../constants/infoCardsData";
 
 export default function Mechanism(): JSX.Element {
   return (
