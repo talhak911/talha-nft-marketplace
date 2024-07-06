@@ -1,8 +1,8 @@
 import InfoCard from "../infoCard/InfoCard";
-import { infoCardsData } from "../../constants/infoCardsData";
+import { InfoCardsData } from "../../constants/InfoCardsData";
 
 
-export default function HowItWorks(): JSX.Element {
+export default function Mechanism(): JSX.Element {
   return (
     <div className="px-[30px] py-[40px] md:px-[72px] md:py-[80px] lg:px-[115px] lg:py-[40px]">
       <div className="flex flex-col gap-[48px] lg:gap-[60px] mx-auto max-w-[1050px]">
@@ -17,7 +17,7 @@ export default function HowItWorks(): JSX.Element {
         {/* Cards */}
         <div className="flex flex-col md:flex-row gap-[20px] md:gap-[30px]">
           {/* Single card */}
-         {infoCardsData?.map((item,index)=>
+         {InfoCardsData?.map((item,index)=>
          <InfoCard
          key={index}
          image={item?.image}
