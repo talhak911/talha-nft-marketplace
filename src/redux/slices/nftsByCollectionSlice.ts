@@ -5,7 +5,7 @@ import {
   FetchNftByCollectionParams,
   NftsByCollectionState,
 } from "../../types/types";
-import openSeaApi from "../../utills/axiosInstance/axiosInstance";
+import openSeaApi from "../../utils/axiosInstance/axiosInstance";
 
 const initialState: NftsByCollectionState = {
   nfts: null,
