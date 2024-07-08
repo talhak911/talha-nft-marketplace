@@ -3,7 +3,7 @@ import type {
   CollectionsState,
   GetCollectionsResponse,
 } from "../../types/types";
-import openSeaApi from "../../axiosInstance/axiosInstance";
+import openSeaApi from "../../utils/axiosInstance/axiosInstance";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: CollectionsState = {

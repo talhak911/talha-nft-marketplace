@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { GetNftResponse, NftState, getNftParamsType } from "../../types/types";
 import { AxiosResponse } from "axios";
-import openSeaApi from "../../axiosInstance/axiosInstance";
+import openSeaApi from "../../utils/axiosInstance/axiosInstance";
 
 const initialState: NftState = {
   nft: null,

@@ -52,8 +52,8 @@ export default function Details(): JSX.Element {
               </span>
             </div>
             <div className="block md:hidden">
-              {" "}
-              <Timer isPlaceBid={true} />{" "}
+              
+              <Timer isPlaceBid={true} />
             </div>
 
             {/* Created by */}

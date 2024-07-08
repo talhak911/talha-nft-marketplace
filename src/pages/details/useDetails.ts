@@ -6,7 +6,7 @@ import {
 } from "../../redux/slices/nftSlice";
 import { getNftParamsType } from "../../types/types";
 import { useAppDispatch, useAppSelector } from "../../hooks/useStore";
-import { getArtistName } from "../../libs/getArtistNameFun";
+import { getArtistName } from "../../utils/getArtistNameFun";
 import { useParams } from "react-router-dom";
 
 export const useDetails = () => {
