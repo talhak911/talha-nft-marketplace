@@ -19,9 +19,9 @@ export default function HeroContant(): JSX.Element {
           alt=""
         />
 
-        <figcaption className="h-[109px] bg-bgSecondary p-[20px]  rounded-b-2xl">
+        <figcaption className="h-[109px] bg-bgSecondary px-[20px] py-[22px]  rounded-b-2xl space-y-[10px]">
           <h5 className="font-semibold text-[22px]">{collections[0]?.collection}</h5>
-          <div className="flex gap-2 text-[16px]">
+          <div className="flex gap-[12px] text-[16px] ">
             <p>@</p>
             <p>{collections[0]?.name}</p>
           </div>
