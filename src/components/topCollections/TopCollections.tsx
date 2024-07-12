@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { CollectionType } from "../../types/types";
 import { useTopCollections } from "./useTopCollections";
 import Loader from "../loader/Loader";
-import imageNotFound from "../../assets/images/imageNotFound.jpg"
+import imageNotFound from "../../assets/images/imageNotFound.jpg";
 
 export default function TopCollections() {
   const { collections, error, loading } = useTopCollections();
@@ -30,19 +30,11 @@ export default function TopCollections() {
             src={item?.image_url || imageNotFound}
             className=" w-full  size-[315px] md:size-[330px] rounded-[20px]"
           />
-      <div className="flex justify-between gap-[15px]">
-                        
-                        
-                        <div className="bg-blue-500 w-[95px] h-[95px] md:max-w-[100px] md:max-h-[100px] rounded-[20px]">
-                          
-                        </div>
-                        <div className="bg-blue-500 w-[95px] h-[95px]  md:max-w-[100px] md:max-h-[100px] rounded-[20px]">
-                          
-                        </div>
-                        <div className="bg-blue-500 w-[95px] h-[95px]  md:max-w-[100px] md:max-h-[100px] rounded-[20px]">
-                        </div>
-                       
-                    </div>
+          {/* <div className="flex justify-between gap-[15px]">
+            <div className="bg-blue-500 w-[95px] h-[95px] md:max-w-[100px] md:max-h-[100px] rounded-[20px]"></div>
+            <div className="bg-blue-500 w-[95px] h-[95px]  md:max-w-[100px] md:max-h-[100px] rounded-[20px]"></div>
+            <div className="bg-blue-500 w-[95px] h-[95px]  md:max-w-[100px] md:max-h-[100px] rounded-[20px]"></div>
+          </div> */}
           <div className="flex flex-col gap-[10px] mt-2">
             <h5 className=" size-[22px] font-semibold w-full">
               {item?.collection}
@@ -52,8 +44,6 @@ export default function TopCollections() {
               <p className="text-[16px] ">{item?.name?.slice(0, 18)}</p>
             </div>
           </div>
-
-    
         </Link>
       ))}
     </div>
