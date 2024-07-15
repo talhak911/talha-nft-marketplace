@@ -49,7 +49,7 @@ export default function Collections(): JSX.Element {
         </div>
       </div>
       {error && <span>{error}</span>}
-      <DisplayNFTs nfts={nfts?.nfts} />
+      <DisplayNFTs nfts={nfts?.nfts} bgChange={true} />
       <hr className="border border-bgPrimary" />
     </>
   );
