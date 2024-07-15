@@ -6,11 +6,10 @@ const Timer: React.FC<{ isPlaceBid: boolean }> = ({
 }: {
   isPlaceBid: boolean;
 }) => {
- 
- const countDownTime = useCountDown()
+  const countDownTime = useCountDown();
   return (
-    <div className=" bg-opacity-50 bg-bgSecondary w-full md:w-[295px] h-fit rounded-[30px] p-[30px]">
-      <div className="flex justify-center items-center max-w-[235px] w-fit ">
+    <div className=" bg-opacity-50 bg-bgSecondary w-full md:w-[295px] h-[144px] rounded-[30px] p-[30px]">
+      <div className="flex justify-center items-center  ">
         <div className="flex justify-center flex-col gap-[10px]">
           <h4 className="text-[12px] leading-[13.2px]">Auction ends in:</h4>
           <div className="flex gap-[10px] ">
@@ -25,9 +24,7 @@ const Timer: React.FC<{ isPlaceBid: boolean }> = ({
               </div>
               <p className=" text-[12px]">Hours</p>
             </div>
-            <span className="text-[38px] font-bold  leading-[45.6px] ">
-              :
-            </span>
+            <span className="text-[38px] font-bold  leading-[45.6px] ">:</span>
             <div className="flex flex-col gap-[5px]">
               <div className="flex">
                 <span className=" text-[38px] font-bold  leading-[45.6px]">
@@ -39,9 +36,7 @@ const Timer: React.FC<{ isPlaceBid: boolean }> = ({
               </div>
               <p className=" text-[12px]">Minutes</p>
             </div>
-            <span className="text-[38px] font-bold  leading-[45.6px]">
-              :
-            </span>
+            <span className="text-[38px] font-bold  leading-[45.6px]">:</span>
             <div className="flex flex-col gap-[5px]">
               <div className="flex">
                 <span className=" text-[38px] font-bold  leading-[45.6px]">

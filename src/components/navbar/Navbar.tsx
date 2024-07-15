@@ -9,8 +9,11 @@ function Navbar(): JSX.Element {
   const { isMenuOpen, toggleMenu } = useNavbar();
   return (
     <nav className="flex justify-between items-center text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[34px] h-[54px] lg:h-[100px]">
-      <Link to="/" className="flex items-center">
-        <Logo className="h-[20px] lg:h-[30px] size-[32px] w-8 mr-2" />
+      <Link to="/" className="flex items-center gap-[10px]">
+       {/*     h-[20px] lg:h-[30px] w-8 */}
+        <Logo className="
+          size-[24px]
+         lg:size-[32px]  " />
         <h2 className="text-[16px] lg:text-[20px]  font-bold font-mono">
           NFT Marketplace
         </h2>

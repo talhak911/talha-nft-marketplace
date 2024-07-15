@@ -5,7 +5,7 @@ export default function NftHighlight(): JSX.Element {
   return (
     <div className="relative h-[590px] md:h-[630px] lg:h-[640px] bg-cover bg-center bg-no-repeat bg-nft-mobile md:bg-nft-desktop">
       <div className="absolute inset-0 bg-gradient-to-t from-purple to-transparent">
-        <div className="py-[120px] px-[30px] md:py-[360px] md:px-[90px]  lg:px-[115px]">
+        <div className="pb-[40px] pt-[120px] px-[30px] md:pt-[360px] md:pb-[60px] md:px-[90px]  lg:px-[115px]">
           <div className="flex flex-col md:flex-row md:justify-between">
             <div className="flex flex-col gap-[30px]  ">
               <button className="h-[44px] w-[151px] flex justify-center items-center gap-[12px] bg-bgSecondary rounded-[20px]">

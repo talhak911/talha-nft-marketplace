@@ -47,14 +47,14 @@ export default function Footer(): JSX.Element {
           <span>
             Get exclusive promotions & updates straight to your inbox.
           </span>
-          <div className="flex flex-col md:flex-row gap-[16px] md:gap-0 justify-between md:bg-white rounded-[20px] md:max-w-[420px]">
+          <div className="flex flex-col md:flex-row gap-[16px] md:gap-0 justify-between items-center md:bg-white rounded-[20px] w-full md:max-w-[420px]  md:h-[60px]">
             <input
-              className=" text-bgPrimary h-[46px] rounded-[20px] py-[16px] px-[20px] border border-caption md:border-none  md:focus:outline-none "
+              className=" text-bgPrimary rounded-[20px] py-[19px] h-[46px] w-full md:max-w-[241px] md:h-full placeholder-bgPrimary px-[20px] border placeholder:leading-[22.4px] border-caption placeholder:text-[16px] md:border-none  md:focus:outline-none "
               type="text"
               placeholder="Enter your email here"
             />
 
-            <button className="flex gap-[12px] items-center justify-center h-[46px] rounded-[20px]  bg-purple md:w-[211px] ">
+            <button className="flex gap-[12px] items-center justify-center w-full h-[46px] md:h-full rounded-[20px]  bg-purple md:w-[179px] ">
               <EnvelopIcon />
               <span className="font-semibold text-white">Subscribe</span>
             </button>
