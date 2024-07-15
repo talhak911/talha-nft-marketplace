@@ -3,10 +3,12 @@ import loading from "../../assets/images/loading.gif";
 import { Link } from "react-router-dom";
 import { NftType } from "../../types/types";
 import { useNftCard } from "./useNftCard";
-import imageNotFound from "../../assets/images/imageNotFound.jpg"
+import imageNotFound from "../../assets/images/imageNotFound.jpg";
 export default function NftCard({
   item,
+  bgChange,
 }: {
+  bgChange?: boolean;
   item: NftType;
 }): React.JSX.Element {
   const { handleImageLoad, loadedImage } = useNftCard();
@@ -29,7 +31,13 @@ export default function NftCard({
         effect="blur"
         onLoad={() => handleImageLoad()}
       />
-      <div className=" h-fit w-full min-w-[315px] md:w-[330px] max-w-[315px] md:max-w-[330px] bg-bgPrimary rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]">
+      <div
+        className={
+          bgChange
+            ? "bg-bgPrimary h-fit w-full min-w-[315px] md:w-[330px] max-w-[315px] md:max-w-[330px]  rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]"
+            : "bg-bgSecondary h-fit w-full min-w-[315px] md:w-[330px] max-w-[315px] md:max-w-[330px]  rounded-b-[20px] p-[20px] pb-[25px] md:px-[30px]"
+        }
+      >
         <div className="flex flex-col gap-[25px]">
           <div className="flex flex-col gap-[5px]">
             <h5 className="text-[22px] font-semibold">{item?.name}</h5>
