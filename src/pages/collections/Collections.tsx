@@ -12,7 +12,7 @@ export default function Collections(): JSX.Element {
 
   return (
     <>
-      <div className="px-[30px] pt-[40px]  md:px-[90px] md:pt-[60px] lg:px-[115px] lg:pt-[80px] pb-[14px]">
+      <div className="px-[30px] py-[40px]  md:px-[90px] md:yt-[60px] lg:px-[115px] lg:py-[80px]">
         <div className="flex flex-col gap-[30px] mx-auto max-w-[1050px] ">
           <div className="flex flex-col gap-[10px]">
             <h2 className="font-semibold text-[28px] md:text-[38px] lg:text-[51px]">
@@ -38,13 +38,15 @@ export default function Collections(): JSX.Element {
               <Search />
             </button>
           </div>
-          <div className="flex items-center justify-center mt-10 ">
-            <div className="flex items-center justify-center gap-4">
-              <h5>NFTs</h5>
-              <span className="rounded-[20px] bg-caption px-[10px] py-[5px]">
-                302
-              </span>
-            </div>
+        </div>
+      </div>
+      <div className=" border-b-[2px] border-caption max-w-[315px] lg2:max-w-[1050px]  md:max-w-[680px] mx-auto pt-[10px] px-[30px] ">
+        <div className="flex items-center justify-center py-[19px] ">
+          <div className="flex items-center justify-center gap-[16px]">
+            <h5 className="font-semibold text-[16px]">NFTs</h5>
+            <span className="rounded-[20px] bg-caption px-[10px] py-[5px] hidden md:block ">
+              302
+            </span>
           </div>
         </div>
       </div>
