@@ -19,7 +19,7 @@ export default function Hero(): JSX.Element {
             <HeroContant />
           </div>
 
-          <button className="flex w-full max-w-[315px] mx-auto md:mx-0 justify-center items-center text-white font-semibold px-12 gap-3 md:max-w-[224px] h-[60px] bg-purple rounded-2xl">
+          <button className="flex w-full max-w-[315px] mx-auto md:mx-0 justify-center items-center text-white font-semibold px-12 gap-3 md:max-w-[224px] h-[60px] bg-purple rounded-[20px]">
             <Rocket /> Get Started
           </button>
           <div className="mx-auto md:mx-[0px]">

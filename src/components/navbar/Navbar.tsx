@@ -10,10 +10,11 @@ function Navbar(): JSX.Element {
   return (
     <nav className="flex justify-between items-center text-white py-[15px] px-[30px] md:px-[50px] md:py-[15px] lg:py-[34px] h-[54px] lg:h-[100px]">
       <Link to="/" className="flex items-center gap-[10px]">
-       {/*     h-[20px] lg:h-[30px] w-8 */}
-        <Logo className="
+        <Logo
+          className="
           size-[24px]
-         lg:size-[32px]  " />
+         lg:size-[32px]  "
+        />
         <h2 className="text-[16px] lg:text-[20px]  font-bold font-mono">
           NFT Marketplace
         </h2>
@@ -26,7 +27,7 @@ function Navbar(): JSX.Element {
           <li className="hover:text-caption cursor-pointer">
             Connect a wallet
           </li>
-          <button className="bg-purple h-[60px] w-[152px] rounded-2xl py-[19px] px-[30px] flex items-center gap-2">
+          <button className="bg-purple h-[60px] w-[152px] rounded-[20px] py-[19px] px-[30px] flex items-center gap-2">
             <User /> Sign Up
           </button>
         </ul>
