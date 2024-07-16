@@ -14,7 +14,7 @@ export default function DisplayNFTs({
     <div
       className={
         bgChange
-          ? "bg-bgSecondary px-[30px] py-[40px] md:px-[77px] md:py-[60px] lg:px-[115px]"
+          ? "bg-bgSecondary px-[30px] py-[40px] md:px-[77px] md:pt-[60px] md:pb-[80px] lg:px-[115px]"
           : ""
       }
     >

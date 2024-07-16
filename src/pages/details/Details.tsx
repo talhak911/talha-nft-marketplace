@@ -1,15 +1,12 @@
 import Timer from "../../components/timer/Timer";
 import { useDetails } from "./useDetails";
 import Loader from "../../components/loader/Loader";
-import imageNotFound from "../../assets/images/imageNotFound.jpg"
-
+import imageNotFound from "../../assets/images/imageNotFound.jpg";
+import {ReactComponent as Globe} from "../../assets/icons/globe.svg"
 export default function Details(): JSX.Element {
-
-  const { nft, loading, error ,artistName } = useDetails();
+  const { nft, loading, error, artistName } = useDetails();
   if (loading === "pending") {
-    return (
-     <Loader/>
-    );
+    return <Loader />;
   }
 
   if (error) {
@@ -52,25 +49,29 @@ export default function Details(): JSX.Element {
               </span>
             </div>
             <div className="block md:hidden">
-              
               <Timer isPlaceBid={true} />
             </div>
 
             {/* Created by */}
             <div className="flex flex-col gap-[10px]">
-              <span className="font-mono text-[16px] text-caption md:text-[22px]">
+              <span className="font-mono font-bold text-[16px] text-caption lg:text-[22px]">
                 Created By
               </span>
 
               <div className="flex items-center gap-[12px]">
-                <span>@</span>
-                <span className="text-[16px] lg:text-[22px]"> {artistName ?? "unknown"}</span>
-                
+              <img
+              className="size-[24px] rounded-full"
+              src={nft?.nft?.image_url || imageNotFound}
+              alt=""
+            />
+                <span className="text-[16px] lg:text-[22px]">
+                  {artistName ?? "unknown"}
+                </span>
               </div>
             </div>
             {/* Description */}
             <div className="flex flex-col gap-[10px]">
-              <span className=" font-mono text-[16px] text-caption md:text-[22px]">
+              <span className=" font-mono font-bold text-[16px] text-caption lg:text-[22px]">
                 Description
               </span>
               <div className="flex items-center gap-[12px]">
@@ -82,14 +83,14 @@ export default function Details(): JSX.Element {
 
             {/* Details */}
             <div className="flex flex-col gap-[10px]">
-              <span className=" font-mono text-[16px] text-caption md:text-[22px]">
+              <span className=" font-mono font-bold text-[16px] text-caption lg:text-[22px]">
                 Details
               </span>
               <div className="flex items-center gap-[10px]">
-                <span>@</span>
+              <Globe/>
                 <a
                   href={nft?.nft.opensea_url}
-                  target="_blank" 
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-[16px] lg:text-[22px]"
                 >
@@ -97,14 +98,14 @@ export default function Details(): JSX.Element {
                 </a>
               </div>
               <div className="flex items-center gap-[10px]">
-                <span>@</span>
-                <span className="text-[16px] lg:text-[22px]">View Orignal</span>
+                <Globe/>
+                <span className="text-[16px]  lg:text-[22px]">View Orignal</span>
               </div>
             </div>
 
             {/* Tags */}
             <div className="flex flex-col gap-[10px]">
-              <span className=" font-mono text-[16px] text-caption md:text-[22px]">
+              <span className=" font-mono font-bold text-[16px] text-caption lg:text-[22px]">
                 Tags
               </span>
 

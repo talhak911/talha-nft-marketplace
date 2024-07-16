@@ -10,7 +10,7 @@ export default function Discover(): React.JSX.Element {
 
   return (
     <div className="px-[30px] pt-[40px] pb-[60px] md:pb-[80px] md:px-[72px] lg:px-[115px] lg:py-[80px]">
-      <div className="flex flex-col gap-[40px] md:gap-[60px] max-w-[1050px] mx-auto ">
+      <div className="flex flex-col gap-[40px] lg:gap-[60px] max-w-[1050px] mx-auto ">
         <div className="flex justify-between items-end">
           <div className="flex flex-col gap-[10px]">
             <h3 className="font-semibold text-[28px] lg:text-[38px]">
