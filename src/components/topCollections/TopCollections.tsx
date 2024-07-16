@@ -40,7 +40,11 @@ export default function TopCollections() {
               {item?.collection}
             </h5>
             <div className="flex gap-[12px]">
-              <p>@</p>
+            <img
+            alt=""
+            src={item?.image_url || imageNotFound}
+            className="   size-[24px]  rounded-full"
+          />
               <p className="text-[16px] ">{item?.name?.slice(0, 18)}</p>
             </div>
           </div>

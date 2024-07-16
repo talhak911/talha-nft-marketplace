@@ -1,6 +1,6 @@
 import { useAppSelector } from "../../hooks/useStore";
 import { Link } from "react-router-dom";
-import imageNotFound from "../../assets/images/imageNotFound.jpg"
+import imageNotFound from "../../assets/images/imageNotFound.jpg";
 
 export default function HeroContant(): JSX.Element {
   const collections = useAppSelector(
@@ -20,9 +20,16 @@ export default function HeroContant(): JSX.Element {
         />
 
         <figcaption className="h-[109px] bg-bgSecondary px-[20px] py-[22px]  rounded-b-2xl space-y-[10px]">
-          <h5 className="font-semibold text-[22px]">{collections[0]?.collection}</h5>
+          <h5 className="font-semibold text-[22px] leading-[30.8px]">
+            {collections[0]?.collection}
+          </h5>
           <div className="flex gap-[12px] text-[16px] ">
-            <p>@</p>
+            <img
+              className="size-[24px] rounded-full"
+              src={collections[0]?.image_url || imageNotFound}
+              alt=""
+            />
+
             <p>{collections[0]?.name}</p>
           </div>
         </figcaption>

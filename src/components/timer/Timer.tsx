@@ -13,7 +13,7 @@ const Timer: React.FC<{ isPlaceBid: boolean }> = ({
         <div className="flex justify-center flex-col gap-[10px]">
           <h4 className="text-[12px] leading-[13.2px]">Auction ends in:</h4>
           <div className="flex gap-[10px] ">
-            <div className="flex flex-col gap-[5px]">
+            <div className="flex flex-col gap-[5px] w-[53px]">
               <div className="flex">
                 <span className="  text-[38px] font-bold  leading-[45.6px]">
                   {countDownTime?.hours?.charAt(0)}
@@ -24,8 +24,8 @@ const Timer: React.FC<{ isPlaceBid: boolean }> = ({
               </div>
               <p className=" text-[12px]">Hours</p>
             </div>
-            <span className="text-[38px] font-bold  leading-[45.6px] ">:</span>
-            <div className="flex flex-col gap-[5px]">
+            <span className="text-[38px] font-bold  leading-[45.6px] w-[18px]">:</span>
+            <div className="flex flex-col gap-[5px] w-[53px]">
               <div className="flex">
                 <span className=" text-[38px] font-bold  leading-[45.6px]">
                   {countDownTime?.minutes?.charAt(0)}
@@ -36,8 +36,8 @@ const Timer: React.FC<{ isPlaceBid: boolean }> = ({
               </div>
               <p className=" text-[12px]">Minutes</p>
             </div>
-            <span className="text-[38px] font-bold  leading-[45.6px]">:</span>
-            <div className="flex flex-col gap-[5px]">
+            <span className="text-[38px] font-bold  leading-[45.6px] w-[18px]">:</span>
+            <div className="flex flex-col gap-[5px] w-[53px]">
               <div className="flex">
                 <span className=" text-[38px] font-bold  leading-[45.6px]">
                   {countDownTime?.seconds?.charAt(0)}

@@ -43,8 +43,12 @@ export default function NftCard({
             <h5 className="text-[22px] font-semibold">{item?.name}</h5>
 
             <div className="flex gap-[10px]">
-              <span>@</span>
-              <span className="text-[16px] font-mono"> Artist </span>
+            <img
+              className="size-[24px] rounded-full"
+              src={item?.display_image_url || imageNotFound}
+              alt=""
+            />
+              <span className="text-[16px] font-mono">{item.collection}</span>
             </div>
           </div>
           <div className="flex justify-between">
