@@ -28,7 +28,7 @@ export default function Discover(): React.JSX.Element {
               className="flex items-center justify-center gap-[12px]"
             >
               <EyeIcon />
-              <span>See All</span>
+              <span className="font-semibold">See All</span>
             </Link>
           </button>
         </div>

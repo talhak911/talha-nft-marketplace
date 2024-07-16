@@ -44,7 +44,7 @@ export default function NftCard({
               {item?.name}
             </h5>
 
-            <div className="flex gap-[10px]">
+            <div className="flex gap-[12px]">
               <img
                 className="size-[24px] rounded-full"
                 src={item?.display_image_url || imageNotFound}
@@ -55,13 +55,13 @@ export default function NftCard({
               </span>
             </div>
           </div>
-          <div className="flex justify-between">
-            <div className="flex flex-col gap-[8px]">
+          <div className="flex justify-between font-mono">
+            <div className="flex flex-col  gap-[8px]">
               <span className="text-caption text-[12px] leading-[13.2px]">
                 Price
               </span>
               <span className="text-[12px] md:text-[16px] md:leading-[22.4px] ">
-                1.64 ETH
+                1.63 wETH
               </span>
             </div>
             <div className="flex flex-col gap-[8px] text-right">
