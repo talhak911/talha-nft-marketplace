@@ -23,7 +23,7 @@ export default function SubscribeSection(): JSX.Element {
               </div>
               <div className="flex flex-col lg:flex-row gap-[16px] lg:gap-0 justify-between lg:bg-white rounded-[20px] lg:max-w-[425px]  lg:h-[60px]">
                 <input
-                  className="text-bgPrimary  placeholder-opacity-100 h-[46px]  lg:h-full placeholder-bgPrimary rounded-[20px] px-[20px] py-[19px]  border border-caption lg:border-none  lg:focus:outline-none "
+                  className="text-bgPrimary  placeholder-opacity-100 h-[46px]  lg:h-full placeholder-bgPrimary rounded-[20px] px-[20px] py-[12px]  border border-caption lg:border-none  lg:focus:outline-none "
                   type="text"
                   placeholder="Enter your email here"
                 />
