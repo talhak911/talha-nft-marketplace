@@ -10,7 +10,7 @@ export default function Hero(): JSX.Element {
           <h1 className=" text-[28px] md:text-[38px] lg:text-[67px] leading-[39px] md:leading-[45px]  lg:leading-[73px] font-semibold ">
             Discover Digital Art & Collect NFTs
           </h1>
-          <p className="text-white text-[16px] lg:text-[22px] p-1">
+          <p className="text-white text-[16px] lg:text-[22px]">
             NFT marketplace UI created with Anima for Figma. Collect, buy and
             sell art from more than 20k NFT artists.
           </p>
